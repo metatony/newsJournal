@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 body {
+    font-family: 'Zain', sans-serif;
     @apply bg-[#F4F4F9]
 }
 

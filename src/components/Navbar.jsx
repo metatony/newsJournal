@@ -10,16 +10,25 @@ import navMenu from '../constants/navMenu';
 
 
 function Navbar() {
+
+    function getFormattedDate() {
+        const date = new Date();
+        const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+      }
+      
+      console.log(getFormattedDate());
+
   return (
-    <div className=''>
+    <div className='sticky top-0 bg-[#F4F4F9] z-10'>
 
         {/* top nav */}
         <div className='pt-4'>
             <hr />
-            <div className='align flex my-2.5 px-5'>
+            <div className='align flex my-2.5 px-10'>
                 <div className='flex items-center space-x-5'>
                     <CiGlobe />
-                    <p>Tuesday, October 29, 2024</p>
+                    <p>{getFormattedDate()}</p>
                 </div>
                 <div className='flex items-center space-x-5'>
                     <p>Menu</p>
@@ -32,7 +41,7 @@ function Navbar() {
 
 
         {/* middle nav : logo */}
-        <div className=' flex justify-center py-8 px-5'>
+        <div className=' flex justify-center py-8 px-10'>
             <Link to='/'>
                 <img className='h-14 w-[300px] item-center'
                 src={images.logo}
@@ -44,7 +53,7 @@ function Navbar() {
         {/* bottom nav - menu */}
         <div>
             <hr />
-            <div className='flex justify-center space-x-14  px-5'>
+            <div className='flex justify-center space-x-14  px-10'>
                 {navMenu.map(function(item){
                     return (
                         <Link className='py-2' key={item.name} to={item.link} >

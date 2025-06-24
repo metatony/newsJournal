@@ -7,14 +7,15 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <div className='container border-2'>
+    <div className='container border-1'>
       <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-      </Routes>
-      <Footer />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+        </Routes>
+        <Footer />
       </BrowserRouter>
+
     </div>
 
   )
