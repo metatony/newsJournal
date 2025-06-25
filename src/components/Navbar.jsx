@@ -19,13 +19,14 @@ function Navbar() {
       
       console.log(getFormattedDate());
 
+    //   sticky top-0
   return (
-    <div className='sticky top-0 bg-[#F4F4F9] z-10'>
+    <div className=' bg-[#F4F4F9] z-10'>
 
         {/* top nav */}
+        
         <div className='pt-4'>
-            <hr />
-            <div className='align flex my-2.5 px-10'>
+            <div className='align border-t border-b border-[#b1b1b1] py-4 flex my-2.5 px-10'>
                 <div className='flex items-center space-x-5'>
                     <CiGlobe />
                     <p>{getFormattedDate()}</p>
@@ -36,7 +37,6 @@ function Navbar() {
                     <IoSearchOutline />
                 </div>
             </div>
-            <hr />
         </div>
 
 
@@ -51,18 +51,16 @@ function Navbar() {
 
 
         {/* bottom nav - menu */}
-        <div>
-            <hr />
-            <div className='flex justify-center space-x-14  px-10'>
+        <div className='border-t border-b border-[#b1b1b1] py-4'>
+            <div className='flex justify-center space-x-14 px-10'>
                 {navMenu.map(function(item){
                     return (
-                        <Link className='py-2' key={item.name} to={item.link} >
+                        <Link className='' key={item.name} to={item.link} >
                             {item.name}
                         </Link>
                     )
                 })}
             </div>
-            <hr />
         </div>
 
 

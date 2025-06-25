@@ -14,18 +14,18 @@ import { FcReddit } from "react-icons/fc";
 
 function Footer() {
   return (
-    <div>
+    <div className='mt-28 '>
 
         {/* top footer nav */}
-        <div className=' py-4 border-t-2 px-10'>
+        <div className=' py-4 border-t border-[#b1b1b1] px-10'>
             <img src={images.blackLogo} alt="footer logo" />
         </div>
 
 
         {/* bottom footer nav */}
         <div className=''>
-            <hr />
-            <div className='align flex my-4 px-10'>
+            
+            <div className='align flex  px-10 border-b border-t border-[#b1b1b1] py-4'>
                 <div className='flex items-center space-x-5'>
                     <CgDropInvert />
                     <p className='font-light text-sm'> Copyright &copy; { new Date().getFullYear()} - The News - All rights reserved</p>
@@ -38,7 +38,6 @@ function Footer() {
                     <FcReddit />
                 </div>
             </div>
-            <hr />
         </div>
 
 

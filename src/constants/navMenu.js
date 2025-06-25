@@ -4,7 +4,7 @@ const navMenu = [
         link: '/world-news',
     },
     {
-        name: 'Politics',
+        name: 'Wall Street Journal',
         link: '/politics',
     },
     {
@@ -12,17 +12,26 @@ const navMenu = [
         link: '/technology',
     },
     {
-        name: 'Sports',
-        link: '/sports',
+        name: 'Tesla',
+        link: '/tesla',
     },
     {
-        name: 'Health',
-        link: '/health',
+        name: 'Apple',
+        link: '/apple',
     },
     {
         name: 'Business',
         link: '/business',
     },
+    {
+        name: 'BBC News',
+        link: '/bbc-news',
+    },
+    {
+        name: 'About',
+        link: '/about',
+    }
+
 ]
 
 export default navMenu;
