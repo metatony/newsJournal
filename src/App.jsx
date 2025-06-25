@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import HomePage from './pages/homePage/HomePage'
 import Footer from './components/Footer'
 import { GlobalProvider } from './provider/GlobalProvider'
+import AboutPage from './pages/aboutPage/About'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage/>} />
+            <Route path='/about' element={<AboutPage/>}/>
           </Routes>
           <Footer />
         </BrowserRouter>
