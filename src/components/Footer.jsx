@@ -17,7 +17,7 @@ function Footer() {
     <div className='mt-28 '>
 
         {/* top footer nav */}
-        <div className=' py-4 border-t border-[#b1b1b1] px-10'>
+        <div className=' py-4 border-t border-[#b1b1b1] px-5 lg:px-10'>
             <img src={images.blackLogo} alt="footer logo" />
         </div>
 
@@ -25,12 +25,12 @@ function Footer() {
         {/* bottom footer nav */}
         <div className=''>
             
-            <div className='align flex  px-10 border-b border-t border-[#b1b1b1] py-4'>
+            <div className='align flex flex-col md:flex-row px-5 lg:px-10 border-b border-t border-[#b1b1b1] py-4'>
                 <div className='flex items-center space-x-5'>
                     <CgDropInvert />
                     <p className='font-light text-sm'> Copyright &copy; { new Date().getFullYear()} - The News - All rights reserved</p>
                 </div>
-                <div className='flex items-center space-x-5'>
+                <div className='flex items-center space-x-5 mt-5 lg:mt-0'>
                     <IoLogoInstagram /> 
                     <CiLinkedin /> 
                     <AiOutlineYoutube />

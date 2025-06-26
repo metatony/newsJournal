@@ -10,16 +10,15 @@ export const GlobalProvider = ({children}) => {
 
     useEffect(()=> {
         Promise.all([
-            axios.get('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=140b833c58974697b63ce3eee956f78f'),
-            axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=140b833c58974697b63ce3eee956f78f'),
-            axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=140b833c58974697b63ce3eee956f78f'),
-            axios.get('https://newsapi.org/v2/everything?q=apple&from=2025-06-24&to=2025-06-24&sortBy=popularity&apiKey=140b833c58974697b63ce3eee956f78f'),
-            axios.get('https://newsapi.org/v2/everything?q=tesla&from=2025-05-25&sortBy=publishedAt&apiKey=140b833c58974697b63ce3eee956f78f'),
-            axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=140b833c58974697b63ce3eee956f78f'),
-            axios.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=140b833c58974697b63ce3eee956f78f')
+            axios.get('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=6d18482b6ce244cca73a6f19a42e926b'),
+            axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=6d18482b6ce244cca73a6f19a42e926b'),
+            axios.get('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=6d18482b6ce244cca73a6f19a42e926b'),
+            axios.get('https://newsapi.org/v2/everything?q=apple&from=2025-06-24&to=2025-06-24&sortBy=popularity&apiKey=6d18482b6ce244cca73a6f19a42e926b'),
+            axios.get('https://newsapi.org/v2/everything?q=tesla&from=2025-05-25&sortBy=publishedAt&apiKey=6d18482b6ce244cca73a6f19a42e926b'),
+            axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=6d18482b6ce244cca73a6f19a42e926b'),
+            axios.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=6d18482b6ce244cca73a6f19a42e926b')
 
-            
-
+        
         ])
         .then(function(response) {
             const wallStreet = response[0].data.articles
