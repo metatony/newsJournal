@@ -1,9 +1,7 @@
 import React from 'react'
 import { IoSearchOutline } from "react-icons/io5";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { CiGlobe } from "react-icons/ci";
 import images from '../constants/images';
-import { Link } from 'react-router';
 import { CgDropInvert } from "react-icons/cg";
 import { IoLogoInstagram } from "react-icons/io5";
 import { CiLinkedin } from "react-icons/ci";
