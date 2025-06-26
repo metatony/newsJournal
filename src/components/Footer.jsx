@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoSearchOutline } from "react-icons/io5";
 import images from '../constants/images';
 import { CgDropInvert } from "react-icons/cg";
 import { IoLogoInstagram } from "react-icons/io5";
