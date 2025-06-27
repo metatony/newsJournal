@@ -7,8 +7,6 @@ import { Link } from 'react-router';
 import navMenu from '../constants/navMenu';
 
 
-
-
 function Navbar() {
 
     function getFormattedDate() {
@@ -39,7 +37,6 @@ function Navbar() {
             </div>
         </div>
 
-
         {/* middle nav : logo */}
         <div className=' flex justify-center py-8 px-5 lg:px-10'>
             <Link to='/'>
@@ -48,7 +45,6 @@ function Navbar() {
                 alt="news logo" />
             </Link>
         </div>
-
 
         {/* bottom nav - menu */}
         <div className='hidden lg:block border-t border-b border-[#b1b1b1] py-4'>
