@@ -19,7 +19,6 @@ function HomePage() {
       {/* World news */}
       <SectionThree />
 
-      
       {/* technology news */}
       <SectionFour />
 
