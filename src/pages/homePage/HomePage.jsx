@@ -7,10 +7,6 @@ import SectionFour from './SectionFour';
 
 function HomePage() {
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
   return (
     <div className=' mt-5 lg:mt-20 mb-6'>
 

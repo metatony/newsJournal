@@ -8,17 +8,10 @@ function SectionThree() {
 
     const {data, loading} = useGlobal();
 
-    const wallStreetArticles = data.wallStreet;
-    const BusinessArticles = data.Business;
-    const techCrunchArticles = data.techCrunch;
-    const appleArticles = data.apple;
-    const teslaArticles = data.tesla;
-    const TopHeadlines = data.TopHeadlines;
-    const bbcNewsArticles = data.bbcNews;
 
-    if (loading || !wallStreetArticles || !BusinessArticles || !techCrunchArticles || !appleArticles || !teslaArticles || !TopHeadlines || !bbcNewsArticles) {
-        return <p className="text-center mt-20">Loading...</p>;
-      }
+    if (loading) {
+      return <div>Loading...</div>;
+    }
     
     
   return (
@@ -29,7 +22,7 @@ function SectionThree() {
           </p>
 
           <Link
-            to={TopHeadlines[0].url}
+            to={data[0].url}
             className="flex items-center space-x-5 pr-5 lg:pr-10"
           >
             <p className="text-sm md:text-base font-light">View all</p>
@@ -43,7 +36,7 @@ function SectionThree() {
           <div className="col-span-2">
             <img
               className="h-full w-full object-cover lg:rounded-lg"
-              src={wallStreetArticles[0].urlToImage}
+              src={data[0].urlToImage}
               alt=""
             />
           </div>
@@ -51,7 +44,7 @@ function SectionThree() {
 
           <div className="flex flex-col space-y-5 px-5 lg:px-0">
             {
-              wallStreetArticles.slice(1, 4).map(function(item){
+              data.slice(1, 4).map(function(item){
                 return(
                   <Link to={item.url} className="flex items-start lg:items-center space-x-5">
                     <div>

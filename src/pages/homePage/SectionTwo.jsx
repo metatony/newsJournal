@@ -6,11 +6,6 @@ import { Link } from "react-router-dom";
 function SectionTwo() {
   const { data, loading } = useGlobal();
 
-  const wallStreetArticles = data.wallStreet;
-  const BusinessArticles = data.Business;
-  const TopHeadlines = data.TopHeadlines;
-  const bbcNewsArticles = data.bbcNews;
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -20,7 +15,7 @@ function SectionTwo() {
       <div className="flex items-start align border-b border-[#b1b1b1] pb-4">
         <p className="md:text-2xl font-medium w-[260px] lg:w-[600px] px-5 lg:px-10">LATEST NEWS</p>
 
-        <Link to={TopHeadlines[0].url} className="flex items-center space-x-5 px-5 lg:px-10">
+        <Link to={data[0].url} className="flex items-center space-x-5 px-5 lg:px-10">
           <p className="text-sm md:text-base font-light">Read Article</p>
           <TfiArrowCircleRight />
         </Link>
@@ -33,13 +28,13 @@ function SectionTwo() {
         <div className="">
           <img
             className="lg:h-full object-cover lg:rounded-lg"
-            src={wallStreetArticles[0].urlToImage}
+            src={data[0].urlToImage}
             alt=""
           />
         </div>
         {/* flex-col grid */}
         <div className="flex flex-col space-y-7 px-5 lg:px-0 ">
-          {bbcNewsArticles.slice(0, 2).map(function (item) {
+          {data.slice(0, 2).map(function (item) {
             return (
               <Link to={item.url} className="flex items-start lg:items-center space-x-5">
                 <div className="block lg:hidden">
@@ -70,7 +65,7 @@ function SectionTwo() {
 
       {/* 3 grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 mt-10 px-5 lg:px-10 justify-between">
-        {BusinessArticles.slice(0, 3).map(function (item) {
+        {data.slice(0, 3).map(function (item) {
           return (
             <Link to={item.url} className="flex flex-col items-start space-y-3">
               <img

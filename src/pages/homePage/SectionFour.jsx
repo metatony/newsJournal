@@ -7,23 +7,11 @@ import { Link } from 'react-router-dom';
 function SectionFour() {
 
     const {data, loading} = useGlobal();
-
-    const wallStreetArticles = data.wallStreet;
-    const BusinessArticles = data.Business;
-    const techCrunchArticles = data.techCrunch;
-    const appleArticles = data.apple;
-    const teslaArticles = data.tesla;
-    const TopHeadlines = data.TopHeadlines;
-    const bbcNewsArticles = data.bbcNews;
   
-  
-    // if (loading) {
-    //   return <div>Loading...</div>;
-    // }
-  
-    if (loading || !wallStreetArticles || !BusinessArticles || !techCrunchArticles || !appleArticles || !teslaArticles || !TopHeadlines || !bbcNewsArticles) {
-      return <p className="text-center mt-20">Loading...</p>;
+    if (loading) {
+      return <div>Loading...</div>;
     }
+  
 
   return (
     <div>
@@ -34,7 +22,7 @@ function SectionFour() {
                 </p>
 
                 <Link
-                    to={techCrunchArticles[0].url} className="flex items-center space-x-5 pr-5 lg:pr-10">
+                    to={data[0].url} className="flex items-center space-x-5 pr-5 lg:pr-10">
                     <p className="text-sm md:text-base font-light">View all</p>
                     <TfiArrowCircleRight />
                 </Link>
@@ -43,7 +31,7 @@ function SectionFour() {
             {/* 3 grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 px-5 lg:px-10 justify-between">
                 {
-                    techCrunchArticles.slice(0, 4).map(function(item){
+                    data.slice(0, 4).map(function(item){
                         return(
                             <Link
                             to={item.url}
