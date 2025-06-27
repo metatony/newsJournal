@@ -13,7 +13,7 @@ export const GlobalProvider = ({children}) => {
 
         console.log("Loaded API key:", apiKey);
 
-        axios.get(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${apiKey}`)
+        axios.get(`https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey}`)
 
 
         .then(function(response) {

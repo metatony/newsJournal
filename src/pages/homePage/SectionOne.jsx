@@ -4,16 +4,14 @@ import { useGlobal } from "../../provider/GlobalProvider";
 import { Link } from "react-router-dom";
 
 function SectionOne() {
-    const {data, loading} = useGlobal();
+  const { data, loading } = useGlobal();
 
-    // const TopHeadlines = data.TopHeadlines;
-    // const bbcNewsArticles = data.bbcNews;
+  // const TopHeadlines = data.TopHeadlines;
+  // const bbcNewsArticles = data.bbcNews;
 
-    if (loading) {
-        return <div>Loading...</div>;
-      }
-
-
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
@@ -22,12 +20,11 @@ function SectionOne() {
           return (
             <Link key={item.url} to={item.url}>
               <div className="flex space-x-4">
-                  <img
-                    className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
-                    src={item.urlToImage}
-                    alt={item.source.name}
-                  />
-        
+                <img
+                  className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
+                  src={item.image}
+                  alt={item.source.name}
+                />
 
                 <div className="">
                   <p className="font-medium">
@@ -49,23 +46,26 @@ function SectionOne() {
 
       {/* background image */}
       <div>
-        <div className='mt-10'>
-          <img className='w-full ' src={data[4].urlToImage} alt="featured news image" />
+        <div className="mt-10">
+          <img
+            className="w-full "
+            src={data[4].image}
+            alt="featured news image"
+          />
         </div>
 
         {/* bottom section */}
-        <div className='flex align items-start mt-10 px-5 lg:px-10 '>
-          <p className='md:text-2xl font-light w-64 md:w-80  lg:w-[600px]'>{data[4].title}</p>
+        <div className="flex align items-start mt-10 px-5 lg:px-10 ">
+          <p className="md:text-2xl font-light w-64 md:w-80  lg:w-[600px]">
+            {data[4].title}
+          </p>
 
-          <Link to={data[4].url} className='flex items-center space-x-5'>
-              <p className='text-sm md:text-base font-light'>Read Article</p>
-              <TfiArrowCircleRight />
+          <Link to={data[4].url} className="flex items-center space-x-5">
+            <p className="text-sm md:text-base font-light">Read Article</p>
+            <TfiArrowCircleRight />
           </Link>
-
         </div>
       </div>
-
-
     </div>
   );
 }
