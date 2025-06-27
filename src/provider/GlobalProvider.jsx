@@ -7,10 +7,11 @@ export const GlobalContext = createContext();
 export const GlobalProvider = ({children}) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const apiKey = import.meta.env.VITE_NEWS_API_KEY;
 
     useEffect(()=> {
 
-        axios.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=05deffaadbdb4d32814d2712d59f1210')
+        axios.get(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${apiKey}`)
 
 
         .then(function(response) {
@@ -29,7 +30,7 @@ export const GlobalProvider = ({children}) => {
             setLoading(false);
 
         })
-    }, [])
+    }, [apiKey]);
 
     return (
         <GlobalContext.Provider value={{data, loading}}>
