@@ -17,14 +17,12 @@ function SectionThree() {
   return (
       <div className="mt-20">
         <div className="flex align border-b border-[#b1b1b1] pb-4">
-          <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-[260px] lg:w-[600px]">
+          <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-64 md:w-80  lg:w-[600px]">
             WORLD NEWS
           </p>
 
           <Link
-            to={data[0].url}
-            className="flex items-center space-x-5 pr-5 lg:pr-10"
-          >
+            to={data[0].url} className="flex items-center space-x-5 pr-5 lg:pr-10">
             <p className="text-sm md:text-base font-light">View all</p>
             <TfiArrowCircleRight />
           </Link>
@@ -33,7 +31,7 @@ function SectionThree() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5 lg:px-10 ">
           {/* large large */}
-          <div className="col-span-2">
+          <div className="md:col-span-2">
             <img
               className="h-full w-full object-cover lg:rounded-lg"
               src={data[0].urlToImage}
@@ -42,24 +40,24 @@ function SectionThree() {
           </div>
           {/* flex-col grid */}
 
-          <div className="flex flex-col space-y-5 px-5 lg:px-0">
+          <div className="grid grid-cols-1 space-y-5 px-5 lg:px-0 content-between ">
             {
               data.slice(1, 4).map(function(item){
                 return(
-                  <Link to={item.url} className="flex items-start lg:items-center space-x-5">
-                    <div>
+                  <Link to={item.url} className="grid grid-cols-2 items-start gap-5">
+                    <div className=''>
                       <img
-                        className="h-[80px] lg:h-[182px] lg:w-[190px] object-cover rounded-lg "
+                        className="lg:h-44 lg:w-full object-cover rounded-lg"
                         src={item.urlToImage}
                         alt=""
                       />
                     </div>
     
                     <div className="">
-                      <p className="font-light text-sm ">
-                        WallStreet Journal - September, 2025
+                      <p className="font-light text-sm">
+                        BBC News - September, 2025
                       </p>
-                      <p className="w-[264px] lg:w-[280px] lg:text-lg ">
+                      <p className="font-medium ">
                         {item.title}
                       </p>
                     </div>

@@ -17,7 +17,7 @@ function SectionFour() {
     <div>
       <div className="mt-20">
             <div className="flex align border-b border-[#b1b1b1] pb-4">
-                <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-[260px] lg:w-[600px]">
+                <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-64 md:w-80  lg:w-[600px]">
                     TECHNOLOGY NEWS
                 </p>
 
@@ -29,21 +29,21 @@ function SectionFour() {
             </div>
 
             {/* 3 grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 px-5 lg:px-10 justify-between">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 px-5 lg:px-10">
                 {
-                    data.slice(0, 4).map(function(item){
+                    data.slice(5, 9).map(function(item){
                         return(
                             <Link
                             to={item.url}
-                            className="flex flex-col items-start space-y-3">
+                            className="flex flex-col ">
                                 <img
-                                className="h-[230px] w-full object-cover rounded-lg"
+                                className="object-cover rounded-lg"
                                 src={item.urlToImage}
                                 alt=""
                                 />
                                 <div>
-                                    <p className="font-light text-sm mt-3">TechCrunch - September, 2025</p>
-                                    <p className="w-[302px] lg:text-lg">{item.title}</p>
+                                    <p className="font-light text-sm mt-5">TechCrunch - September, 2025</p>
+                                    <p className="">{item.title}</p>
                                 </div>
                         </Link>
 

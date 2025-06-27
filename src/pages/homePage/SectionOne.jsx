@@ -17,18 +17,17 @@ function SectionOne() {
 
   return (
     <div>
-      <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center px-5 lg:px-10">
+      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10">
         {data.slice(0, 4).map(function (item) {
           return (
             <Link key={item.url} to={item.url}>
-              <div className="flex items-start lg:items-center space-x-5  ">
-                <div>
+              <div className="flex space-x-4">
                   <img
-                    className="h-[80px] lg:w-[80px] object-cover rounded-lg"
+                    className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
                     src={item.urlToImage}
                     alt={item.source.name}
                   />
-                </div>
+        
 
                 <div className="">
                   <p className="font-medium">
@@ -36,9 +35,9 @@ function SectionOne() {
                       ? item.title.substring(0, 30) + "..."
                       : item.title}
                   </p>
-                  <p className="lg:w-[174px] font-light text-sm">
-                    {item.description && item.description.length > 90
-                      ? item.description.substring(0, 90) + "..."
+                  <p className="text-sm font-light">
+                    {item.description && item.description.length > 70
+                      ? item.description.substring(0, 70) + "..."
                       : item.description}
                   </p>
                 </div>
@@ -49,16 +48,16 @@ function SectionOne() {
       </div>
 
       {/* background image */}
-      <div className=' lg:px-10'>
+      <div>
         <div className='mt-10'>
-          <img className='w-full lg:rounded-lg' src={data[0].urlToImage} alt="featured news image" />
+          <img className='w-full ' src={data[4].urlToImage} alt="featured news image" />
         </div>
 
         {/* bottom section */}
-        <div className='flex align items-start mt-10 px-5 lg:px-0 '>
-          <p className='md:text-2xl font-light w-[260px] lg:w-[600px]'>{data[0].title}</p>
+        <div className='flex align items-start mt-10 px-5 lg:px-10 '>
+          <p className='md:text-2xl font-light w-64 md:w-80  lg:w-[600px]'>{data[4].title}</p>
 
-          <Link to={data[0].url} className='flex items-center space-x-5'>
+          <Link to={data[4].url} className='flex items-center space-x-5'>
               <p className='text-sm md:text-base font-light'>Read Article</p>
               <TfiArrowCircleRight />
           </Link>
