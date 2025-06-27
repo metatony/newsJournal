@@ -12,7 +12,7 @@ function SectionTwo() {
 
   return (
     <div className="mt-20 ">
-      <div className="flex items-start align border-b border-[#b1b1b1] pb-4 px-5 lg:px-10">
+      <div className="flex items-start align border-b pb-4 px-5 lg:px-10">
         <p className="md:text-2xl font-medium w-64 md:w-80  lg:w-[600px] ">
           LATEST NEWS
         </p>
@@ -29,7 +29,7 @@ function SectionTwo() {
         {/* large */}
         <div className="">
           <img
-            className="object-cover h-full lg:rounded-lg"
+            className="object-cover h-full w-full lg:rounded-lg"
             src={data[5].image}
             alt=""
           />
@@ -50,7 +50,7 @@ function SectionTwo() {
                 </div>
 
                 <div className="">
-                  <img className="rounded-lg" src={item.image} alt="" />
+                  <img className="lg:h-[140px] w-full  rounded-lg" src={item.image} alt="" />
                 </div>
               </Link>
             );

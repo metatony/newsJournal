@@ -10,7 +10,7 @@ function App() {
 
   return (
     <GlobalProvider>
-      <div className='container border-t border-b border-[#b1b1b1] '>
+      <div className='container border-t border-b border '>
         <BrowserRouter>
           <Navbar />
           <Routes>

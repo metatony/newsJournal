@@ -12,7 +12,7 @@ function SectionThree() {
 
   return (
     <div className="mt-20">
-      <div className="flex align border-b border-[#b1b1b1] pb-4">
+      <div className="flex align border-b  pb-4">
         <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-64 md:w-80  lg:w-[600px]">
           WORLD NEWS
         </p>

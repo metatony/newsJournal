@@ -24,7 +24,7 @@ function Navbar() {
         {/* top nav */}
         
         <div className='pt-4'>
-            <div className='align border-t border-b border-[#b1b1b1] py-4 flex my-2.5 px-5 lg:px-10'>
+            <div className='align border-t border-b py-4 flex my-2.5 px-5 lg:px-10'>
                 <div className='flex items-center space-x-5'>
                     <CiGlobe />
                     <p>{getFormattedDate()}</p>
@@ -47,7 +47,7 @@ function Navbar() {
         </div>
 
         {/* bottom nav - menu */}
-        <div className='hidden lg:block border-t border-b border-[#b1b1b1] py-4'>
+        <div className='hidden lg:block border-t border-b py-4'>
             <div className='flex justify-center space-x-14 px-10'>
                 {navMenu.map(function(item){
                     return (
