@@ -11,6 +11,8 @@ export const GlobalProvider = ({children}) => {
 
     useEffect(()=> {
 
+        console.log("Loaded API key:", apiKey);
+
         axios.get(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${apiKey}`)
 
 
@@ -30,7 +32,7 @@ export const GlobalProvider = ({children}) => {
             setLoading(false);
 
         })
-    }, [apiKey]);
+    }, []);
 
     return (
         <GlobalContext.Provider value={{data, loading}}>

@@ -37,7 +37,7 @@ function SectionTwo() {
         <div className="grid grid-cols-1 gap-5 px-5 lg:px-0">
           {data.slice(6, 8).map(function(item) {
             return (
-              <Link to={item.url} className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <Link key={item.url} to={item.url} className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
 
                 <div className="">
@@ -63,7 +63,7 @@ function SectionTwo() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20 px-5 lg:px-10 justify-between">
         {data.slice(0, 3).map(function (item) {
           return (
-            <Link to={item.url} className="flex flex-col items-start space-y-5">
+            <Link key={item.url} to={item.url} className="flex flex-col items-start space-y-5">
               <img
                 className=" w-full object-cover rounded-lg"
                 src={item.urlToImage}
