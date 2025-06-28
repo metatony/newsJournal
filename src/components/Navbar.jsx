@@ -30,7 +30,8 @@ function Navbar() {
                     <p>{getFormattedDate()}</p>
                 </div>
                 <div className='flex items-center space-x-5'>
-                    <p>Menu</p>
+                    <p className='hidden lg:block' >Menu</p>
+                    <Link to='/world-news' className='block lg:hidden' >World News</Link>
                     <RiArrowRightSLine />
                     <IoSearchOutline />
                 </div>
