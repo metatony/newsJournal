@@ -7,13 +7,13 @@ function SectionTwo() {
   const { data, loading } = useGlobal();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="text-center">Loading...</div>;
   }
 
   return (
     <div className="mt-20 ">
       <div className="flex items-start align border-b pb-4 px-5 lg:px-10">
-        <p className="md:text-2xl font-medium w-64 md:w-80  lg:w-[600px] ">
+        <p className="md:text-2xl font-medium w-56   md:w-80  lg:w-[600px] ">
           LATEST NEWS
         </p>
 

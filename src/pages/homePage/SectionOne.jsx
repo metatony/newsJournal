@@ -10,7 +10,7 @@ function SectionOne() {
     // const bbcNewsArticles = data.bbcNews;
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className="text-center">Loading...</div>;
       }
 
 
@@ -55,8 +55,9 @@ function SectionOne() {
 
         {/* bottom section */}
         <div className='flex align items-start mt-10 px-5 lg:px-10 '>
-          <p className='md:text-2xl font-light w-64 md:w-80  lg:w-[600px]'>{data[4].title}</p>
+          <p className='md:text-xl font-light w-[230px] sm:w-80 lg:w-[600px]'>{data[4].title}</p>
 
+  
           <Link to={data[4].url} className='flex items-center space-x-5'>
               <p className='text-sm md:text-base font-light'>Read Article</p>
               <TfiArrowCircleRight />

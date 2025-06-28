@@ -4,17 +4,10 @@ const navMenu = [
         link: '/world-news',
     },
     {
-        name: 'Wall Street Journal',
-        link: '/politics',
-    },
-    {
         name: 'Technology',
         link: '/technology',
     },
-    {
-        name: 'Tesla',
-        link: '/tesla',
-    },
+
     {
         name: 'Apple',
         link: '/apple',
@@ -28,7 +21,7 @@ const navMenu = [
         link: '/bbc-news',
     },
     {
-        name: 'About',
+        name: 'About Me',
         link: '/about',
     }
 
