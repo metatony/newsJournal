@@ -1,5 +1,4 @@
 import React from 'react'
-import { IoSearchOutline } from "react-icons/io5";
 import images from '../constants/images';
 import { CgDropInvert } from "react-icons/cg";
 import { IoLogoInstagram } from "react-icons/io5";
@@ -25,7 +24,7 @@ function Footer() {
             <div className='align flex flex-col md:flex-row px-5 lg:px-10 border-b border-t py-4'>
                 <div className='flex items-center space-x-5'>
                     <CgDropInvert />
-                    <p className='font-light text-sm'> Copyright &copy; { new Date().getFullYear()} - The News - All rights reserved</p>
+                    <p className='font-light text-sm'> Copyright &copy; { new Date().getFullYear()} - The News - All rights reserved - &copy; Metatony</p>
                 </div>
                 <div className='flex items-center space-x-5 mt-5 lg:mt-0'>
                     <IoLogoInstagram /> 

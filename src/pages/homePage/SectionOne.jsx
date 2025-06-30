@@ -49,8 +49,8 @@ function SectionOne() {
 
       {/* background image */}
       <div>
-        <div className='mt-10'>
-          <img className='w-full ' src={data[4].image} alt="featured news image" />
+        <div className='mt-10 lg:px-10 lg:rounded-lg'>
+          <img className='w-full lg:rounded-lg' src={data[4].image} alt="featured news image" />
         </div>
 
         {/* bottom section */}
