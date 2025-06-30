@@ -1,9 +1,9 @@
 import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
-import { useGlobal } from "../../provider/GlobalProvider";
+import { useGlobal } from "../../../provider/GlobalProvider";
 import { Link } from "react-router-dom";
 
-function SectionTwo() {
+function LatestNews() {
   const { data, loading } = useGlobal();
 
   if (loading) {
@@ -11,7 +11,7 @@ function SectionTwo() {
   }
 
   return (
-    <div className="mt-20 ">
+    <section className="mt-20 ">
       <div className="flex items-start align border-b pb-4 px-5 lg:px-10">
         <p className="md:text-2xl font-medium w-56   md:w-80  lg:w-[600px] ">
           LATEST NEWS
@@ -80,8 +80,8 @@ function SectionTwo() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
 
-export default SectionTwo;
+export default LatestNews;

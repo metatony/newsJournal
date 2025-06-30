@@ -1,9 +1,9 @@
 import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
-import { useGlobal } from "../../provider/GlobalProvider";
+import { useGlobal } from "../../../provider/GlobalProvider";
 import { Link } from "react-router-dom";
 
-function SectionFour() {
+function TechnologyNews() {
   const { data, loading } = useGlobal();
 
   if (loading) {
@@ -11,8 +11,7 @@ function SectionFour() {
   }
 
   return (
-    <div>
-      <div className="mt-20">
+      <section className="mt-20">
         <div className="flex align border-b pb-4">
           <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-64 md:w-80  lg:w-[600px]">
             TECHNOLOGY NEWS
@@ -31,7 +30,7 @@ function SectionFour() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 px-5 lg:px-10">
           {data.slice(5, 9).map(function (item) {
             return (
-              <Link to={item.url} className="flex flex-col ">
+              <Link key={item.url} to={item.url} className="flex flex-col ">
                 <img
                   className="object-cover rounded-lg md:h-44 w-full"
                   src={item.image}
@@ -47,9 +46,9 @@ function SectionFour() {
             );
           })}
         </div>
-      </div>
-    </div>
+      </section>
   );
 }
 
-export default SectionFour;
+export default TechnologyNews;
+

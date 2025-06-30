@@ -4,45 +4,41 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export const GlobalContext = createContext();
 
-export const GlobalProvider = ({children}) => {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+export const GlobalProvider = ({ children }) => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const apiKey = import.meta.env.VITE_NEWS_API_KEY;
 
-    useEffect(()=> {
+  useEffect(() => {
+    console.log("Loaded API key:", apiKey);
 
-        console.log("Loaded API key:", apiKey);
+    axios
+      .get(
+        `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey}`
+      )
 
-        axios.get(`https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey}`)
+      .then(function (response) {
+        if (response.status !== 200) {
+          throw new Error(`Error: ${response.status}`);
+        }
+        console.log(response.data);
 
+        setData(response.data.articles);
+        setLoading(false);
+      })
+      .catch(function (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, []);
 
-        .then(function(response) {
-
-            if (response.status !== 200){
-                throw new Error(`Error: ${response.status}`);
-            }
-            console.log(response.data)
-
-            setData(response.data.articles);
-            setLoading(false);
-
-        })
-        .catch(function(error){
-            console.error("Error fetching data:", error);
-            setLoading(false);
-
-        })
-    }, []);
-
-    return (
-        <GlobalContext.Provider value={{data, loading}}>
-            {children}
-        </GlobalContext.Provider>
-    )
-
-}
+  return (
+    <GlobalContext.Provider value={{ data, loading }}>
+      {children}
+    </GlobalContext.Provider>
+  );
+};
 
 export const useGlobal = () => {
-    return useContext(GlobalContext);
-  };
-  
+  return useContext(GlobalContext);
+};
