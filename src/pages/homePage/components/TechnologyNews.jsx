@@ -17,20 +17,23 @@ function TechnologyNews() {
             TECHNOLOGY NEWS
           </p>
 
-          <Link
-            to={data[0].url}
+          <a
+            href={data[0].url}
+            target="_blank" rel="noopener noreferrer"
             className="flex items-center space-x-5 pr-5 lg:pr-10"
           >
             <p className="text-sm md:text-base font-light">View all</p>
             <TfiArrowCircleRight />
-          </Link>
+          </a>
         </div>
 
         {/* 3 grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 px-5 lg:px-10">
           {data.slice(5, 9).map(function (item) {
             return (
-              <Link key={item.url} to={item.url} className="flex flex-col ">
+              <a key={item.url} href={item.url} 
+              target="_blank" rel="noopener noreferrer" 
+              className="flex flex-col ">
                 <img
                   className="object-cover rounded-lg md:h-44 w-full"
                   src={item.image}
@@ -42,7 +45,7 @@ function TechnologyNews() {
                   </p>
                   <p className="">{item.title}</p>
                 </div>
-              </Link>
+              </a>
             );
           })}
         </div>

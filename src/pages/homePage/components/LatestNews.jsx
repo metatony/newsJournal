@@ -17,10 +17,10 @@ function LatestNews() {
           LATEST NEWS
         </p>
 
-        <Link to={data[0].url} className="flex items-center space-x-5">
+        <a href={data[0].url} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-5">
           <p className="text-sm md:text-base font-light">Read Article</p>
           <TfiArrowCircleRight />
-        </Link>
+        </a>
       </div>
 
       {/* latest news grid */}
@@ -39,9 +39,10 @@ function LatestNews() {
         <div className="grid grid-cols-1 gap-5 px-5 lg:px-0">
           {data.slice(6, 8).map(function (item) {
             return (
-              <Link
+              <a
                 key={item.url}
-                to={item.url}
+                href={item.url}
+                target="_blank" rel="noopener noreferrer"
                 className="grid grid-cols-1 md:grid-cols-2 gap-5"
               >
                 <div className="">
@@ -52,7 +53,7 @@ function LatestNews() {
                 <div className="">
                   <img className="lg:h-[140px] w-full  rounded-lg" src={item.image} alt="" />
                 </div>
-              </Link>
+              </a>
             );
           })}
         </div>
@@ -62,9 +63,10 @@ function LatestNews() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20 px-5 lg:px-10 justify-between">
         {data.slice(0, 3).map(function (item) {
           return (
-            <Link
+            <a
               key={item.url}
-              to={item.url}
+              href={item.url}
+              target="_blank" rel="noopener noreferrer"
               className="flex flex-col items-start space-y-5"
             >
               <img
@@ -76,7 +78,7 @@ function LatestNews() {
                 <p className="font-medium ">{item.title}</p>
                 <p className="font-light mt-3">{item.source.name} - September, 2025</p>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>

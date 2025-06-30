@@ -18,7 +18,7 @@ function SectionOne() {
       <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10">
         {data.slice(0, 4).map(function (item) {
           return (
-            <Link key={item.url} to={item.url}>
+            <a key={item.url} href={item.url} target="_blank" rel="noopener noreferrer">
               <div className="flex space-x-4">
                 <img
                   className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
@@ -39,7 +39,7 @@ function SectionOne() {
                   </p>
                 </div>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>
@@ -60,10 +60,10 @@ function SectionOne() {
             {data[4].title}
           </p>
 
-          <Link to={data[4].url} className="flex items-center space-x-5">
+          <a href={data[4].url} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-5">
             <p className="text-sm md:text-base font-light">Read Article</p>
             <TfiArrowCircleRight />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

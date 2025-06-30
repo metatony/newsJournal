@@ -17,13 +17,14 @@ function WorldNews() {
           WORLD NEWS
         </p>
 
-        <Link
-          to={data[0].url}
+        <a
+          href={data[0].url}
+          target="_blank" rel="noopener noreferrer"
           className="flex items-center space-x-5 pr-5 lg:pr-10"
         >
           <p className="text-sm md:text-base font-light">View all</p>
           <TfiArrowCircleRight />
-        </Link>
+        </a>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5 lg:px-10 ">
@@ -40,9 +41,10 @@ function WorldNews() {
         <div className="grid grid-cols-1 space-y-5 px-5 lg:px-0 content-between ">
           {data.slice(1, 4).map(function (item) {
             return (
-              <Link
+              <a
               key={item.url}
-                to={item.url}
+                href={item.url}
+                target="_blank" rel="noopener noreferrer"
                 className="grid grid-cols-2 items-start gap-5"
               >
                 <div className="">
@@ -59,7 +61,7 @@ function WorldNews() {
                   </p>
                   <p className="font-medium ">{item.title}</p>
                 </div>
-              </Link>
+              </a>
             );
           })}
         </div>
