@@ -19,7 +19,7 @@ function Navbar() {
 
     //   sticky top-0
   return (
-    <div className='sticky top-0 bg-[#F4F4F9] z-10 shadow-sm'>
+    <div className='sticky top-0 bg-white z-10 shadow-sm'>
 
         {/* top nav */}
         

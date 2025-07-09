@@ -23,8 +23,11 @@ export const GlobalProvider = ({ children }) => {
         }
         console.log(response.data);
 
-        setData(response.data.articles);
-        setLoading(false);
+        // Delay for 2 seconds before showing content
+        setTimeout(() => {
+          setData(response.data.articles);
+          setLoading(false);
+        }, 4000);
       })
       .catch(function (error) {
         console.error("Error fetching data:", error);

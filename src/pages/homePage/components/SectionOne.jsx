@@ -1,7 +1,7 @@
 import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
-import { Link } from "react-router-dom";
 import { useGlobal } from "../../../provider/GlobalProvider";
+import ShimmerEffect from "../../../components/ShimmerEffect";
 
 function SectionOne() {
   const { data, loading } = useGlobal();
@@ -10,7 +10,7 @@ function SectionOne() {
   // const bbcNewsArticles = data.bbcNews;
 
   if (loading) {
-    return <div className="text-center">Loading...</div>;
+    return <ShimmerEffect />;
   }
 
   return (

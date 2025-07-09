@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Zain', sans-serif;
-    @apply bg-[#F4F4F9]
+    @apply bg-[white]
 }
 
 @layer components {

@@ -1,13 +1,13 @@
 import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
-import { Link } from "react-router-dom";
+import ShimmerPost from "../../../components/ShimmerPost";
 
 function TechnologyNews() {
   const { data, loading } = useGlobal();
 
   if (loading) {
-    return <div className="text-center">Loading...</div>;
+    return <ShimmerPost />;
   }
 
   return (

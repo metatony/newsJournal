@@ -2,12 +2,13 @@ import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
 import { Link } from "react-router-dom";
+import ShimmerGallery from "../../../components/ShimmerGallery";
 
 function WorldNews() {
   const { data, loading } = useGlobal();
 
   if (loading) {
-    return <div className="text-center">Loading...</div>;
+    return <ShimmerGallery />;
   }
 
   return (
