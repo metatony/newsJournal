@@ -70,7 +70,7 @@ function LatestNews() {
               className="flex flex-col items-start space-y-5"
             >
               <img
-                className=" w-full object-cover rounded-lg"
+                className=" w-full md:h-64 object-cover rounded-lg"
                 src={item.image}
                 alt=""
               />
