@@ -1,11 +1,18 @@
 import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
-import { Link } from "react-router-dom";
 import ShimmerGallery from "../../../components/ShimmerGallery";
 
 function WorldNews() {
   const { data, loading } = useGlobal();
+
+  function formatDate(dateString) {
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }).format(new Date(dateString));
+  }
 
   if (loading) {
     return <ShimmerGallery />;
@@ -50,7 +57,7 @@ function WorldNews() {
               >
                 <div className="">
                   <img
-                    className="lg:h-44 lg:w-full object-cover rounded-lg"
+                    className="h-36 md:h-44 w-full object-cover rounded-lg"
                     src={item.image}
                     alt=""
                   />
@@ -58,7 +65,7 @@ function WorldNews() {
 
                 <div className="">
                   <p className="font-light text-sm">
-                    {item.source.name} - September, 2025
+                    {item.source.name} - {formatDate(item.publishedAt)}
                   </p>
                   <p className="font-medium ">{item.title}</p>
                 </div>

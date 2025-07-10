@@ -6,6 +6,14 @@ import ShimmerPost from "../../../components/ShimmerPost";
 function TechnologyNews() {
   const { data, loading } = useGlobal();
 
+  function formatDate(dateString) {
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }).format(new Date(dateString));
+  }
+
   if (loading) {
     return <ShimmerPost />;
   }
@@ -41,7 +49,7 @@ function TechnologyNews() {
                 />
                 <div>
                   <p className="font-light text-sm mt-5">
-                    {item.source.name} - September, 2025
+                    {item.source.name} - {formatDate(item.publishedAt)}
                   </p>
                   <p className="">{item.title}</p>
                 </div>

@@ -6,6 +6,14 @@ import ShimmerPost from "../../../components/ShimmerPost";
 function LatestNews() {
   const { data, loading } = useGlobal();
 
+  function formatDate(dateString) {
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }).format(new Date(dateString));
+  }
+
   if (loading) {
     return <ShimmerPost />;
   }
@@ -47,11 +55,11 @@ function LatestNews() {
               >
                 <div className="">
                   <p className="font-medium"> {item.title}</p>
-                  <p className="font-light">{item.source.name} - September, 2025</p>
+                  <p className="font-light">{item.source.name} - {formatDate(item.publishedAt)}</p>
                 </div>
 
                 <div className="">
-                  <img className="lg:h-[140px] w-full  rounded-lg" src={item.image} alt="" />
+                  <img className=" md:h-52    w-full  rounded-lg" src={item.image} alt="" />
                 </div>
               </a>
             );
@@ -76,7 +84,7 @@ function LatestNews() {
               />
               <div>
                 <p className="font-medium ">{item.title}</p>
-                <p className="font-light mt-3">{item.source.name} - September, 2025</p>
+                <p className="font-light mt-3">{item.source.name} - {formatDate(item.publishedAt)}</p>
               </div>
             </a>
           );
