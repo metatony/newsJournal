@@ -12,13 +12,10 @@ const navMenu = [
     name: "Apple",
     link: "/apple",
   },
+
   {
-    name: "Business",
-    link: "/business",
-  },
-  {
-    name: "BBC News",
-    link: "/bbc-news",
+    name: "BBC",
+    link: "/bbc",
   },
   {
     name: "About Me",
