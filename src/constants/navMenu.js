@@ -1,5 +1,9 @@
 const navMenu = [
   {
+    name: "Menu",
+    link: "",
+  },
+  {
     name: "World News",
     link: "/world-news",
   },

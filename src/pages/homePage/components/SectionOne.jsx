@@ -6,9 +6,6 @@ import ShimmerEffect from "../../../components/ShimmerEffect";
 function SectionOne() {
   const { data, loading } = useGlobal();
 
-  // const TopHeadlines = data.TopHeadlines;
-  // const bbcNewsArticles = data.bbcNews;
-
   if (loading) {
     return <ShimmerEffect />;
   }
