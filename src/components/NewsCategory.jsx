@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGlobal } from '../provider/GlobalProvider';
 import { Link } from 'react-router';
+import ShimmerPost from './ShimmerPost';
 
 
 const NewsCategory = (props) => {
