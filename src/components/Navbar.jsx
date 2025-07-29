@@ -59,11 +59,11 @@ function Navbar() {
             <p>{getFormattedDate()}</p>
           </div>
           <div className="flex items-center space-x-5">
-            <p className="hidden lg:block">Menu</p>
+            {/* <p className="hidden lg:block">Menu</p> */}
             <Link
               to={menuLabel.link}
               onClick={(e) => handleMenuClick(e)}
-              className="block lg:hidden"
+              className="block"
             >
               {menuLabel.name}
             </Link>
