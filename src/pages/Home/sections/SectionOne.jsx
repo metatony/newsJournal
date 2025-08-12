@@ -68,4 +68,3 @@ function SectionOne() {
 }
 
 export default SectionOne;
-// This component renders the first section of the home page, displaying a grid of news articles and a featured article with a background image. It uses data from a global provider and handles loading states gracefully.

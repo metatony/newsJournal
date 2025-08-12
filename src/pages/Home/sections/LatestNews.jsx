@@ -35,31 +35,32 @@ function LatestNews() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10 lg:px-10">
         {/* large */}
-        <div className="">
+        <div className=" ">
           <img
             className="object-cover h-full w-full lg:rounded-lg"
             src={data[5].image}
             alt=""
+            loading="lazy"
           />
         </div>
 
         {/* flex-col grid */}
-        <div className="grid grid-cols-1 gap-5 px-5 lg:px-0">
+        <div className="flex flex-col gap-5 px-5 lg:px-0 ">
           {data.slice(6, 8).map(function (item) {
             return (
               <a
                 key={item.url}
                 href={item.url}
                 target="_blank" rel="noopener noreferrer"
-                className="grid grid-cols-1 md:grid-cols-2 gap-5"
+                className="grid grid-cols-1 md:grid-cols-2 gap-3 md:items-center"
               >
                 <div className="">
                   <p className="font-medium"> {item.title}</p>
-                  <p className="font-light">{item.source.name} - {formatDate(item.publishedAt)}</p>
+                  <p className="font-light text-sm">{item.source.name} - {formatDate(item.publishedAt)}</p>
                 </div>
 
                 <div className="">
-                  <img className=" md:h-52    w-full  rounded-lg" src={item.image} alt="" />
+                  <img className=" md:h-52 w-full rounded-lg" src={item.image} alt="" loading="lazy"/>
                 </div>
               </a>
             );

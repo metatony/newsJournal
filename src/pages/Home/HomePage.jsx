@@ -1,8 +1,8 @@
 import React from "react";
-import SectionOne from "./components/SectionOne";
-import LatestNews from "./components/LatestNews";
-import WorldNews from "./components/WorldNews";
-import TechnologyNews from "./components/TechnologyNews";
+import SectionOne from "./sections/SectionOne";
+import LatestNews from "./sections/LatestNews";
+import WorldNews from "./sections/WorldNews";
+import TechnologyNews from "./sections/TechnologyNews";
 
 
 function HomePage() {

@@ -49,10 +49,9 @@ function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 bg-white z-10 shadow-sm">
+    <div className="sticky top-0 z-10 bg-white shadow-sm">
       {/* top nav */}
 
-      <div className="pt-4">
         <div className="align border-t border-b py-4 flex my-2.5 px-5 lg:px-10">
           <div className="flex items-center space-x-5">
             <CiGlobe />
@@ -71,10 +70,9 @@ function Navbar() {
             <IoSearchOutline />
           </div>
         </div>
-      </div>
 
       {/* middle nav : logo */}
-      <div className=" flex justify-center py-8 px-5 lg:px-10">
+      <div className="flex justify-center py-3 px-5 lg:px-10">
         <Link to="/">
           <img
             className="h-14 w-[300px] item-center"
@@ -86,7 +84,7 @@ function Navbar() {
 
       {/* bottom nav - menu */}
       <div className="hidden lg:block border-t border-b py-4">
-        <div className="flex justify-center space-x-14 px-10">
+        <div className="flex justify-center space-x-14 px-10 font-light">
           {navMenu.map(function (item) {
             return (
               <Link className="" key={item.name} to={item.link}>

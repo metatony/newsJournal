@@ -20,8 +20,8 @@ function WorldNews() {
 
   return (
     <section className="mt-20">
-      <div className="flex align border-b  pb-4">
-        <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-64 md:w-80  lg:w-[600px]">
+      <div className="flex align border-b pb-4">
+        <p className=" pl-5 lg:pl-10 md:text-2xl font-medium w-64 md:w-80 lg:w-[600px]">
           WORLD NEWS
         </p>
 
@@ -46,14 +46,14 @@ function WorldNews() {
         </div>
         {/* flex-col grid */}
 
-        <div className="grid grid-cols-1 space-y-5 px-5 lg:px-0 content-between ">
+        <div className="flex flex-col gap-5 px-5 lg:px-0">
           {data.slice(1, 4).map(function (item) {
             return (
               <a
               key={item.url}
                 href={item.url}
                 target="_blank" rel="noopener noreferrer"
-                className="grid grid-cols-2 items-start gap-5"
+                className="grid grid-cols-2 gap-5 items-center"
               >
                 <div className="">
                   <img

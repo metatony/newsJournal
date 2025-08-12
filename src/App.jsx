@@ -1,21 +1,21 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Navbar from "./components/Navbar";
-import HomePage from "./pages/homePage/HomePage";
+import HomePage from "./pages/Home/HomePage";
 import Footer from "./components/Footer";
 import { GlobalProvider } from "./provider/GlobalProvider";
-import AboutPage from "./pages/aboutPage/About";
+import AboutPage from "./pages/About/About";
 import { Analytics } from "@vercel/analytics/react";
-import WorldNews from "./pages/worldNews/WorldNews";
+import WorldNews from "./pages/World/WorldNews";
 import ScrollToTop from "./components/ScrollToTop";
-import TechnologyNews from "./pages/technologyNews/TechnologyNews";
-import AppleNews from "./pages/appleNews/AppleNews";
-import BbcNews from "./pages/bbcNews/BbcNews";
+import TechnologyNews from "./pages/Tech/TechnologyNews";
+import AppleNews from "./pages/Apple/AppleNews";
+import BbcNews from "./pages/Bbc/BbcNews";
 
 function App() {
   return (
     <GlobalProvider>
-      <div className="container border-t border-b border ">
+      <div className="container mx-auto max-w-[1300px] border-t border-b border">
         <BrowserRouter>
           <ScrollToTop />
           <Navbar />
@@ -36,3 +36,5 @@ function App() {
 }
 
 export default App;
+
+// container mx-auto max-w-[1100px] border-t border-b border 
