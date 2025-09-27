@@ -47,7 +47,7 @@ function WorldNews() {
         {/* flex-col grid */}
 
         <div className="flex flex-col gap-5 px-5 lg:px-0">
-          {data.slice(1, 4).map(function (item) {
+          {data?.slice(1, 4).map(function (item) {
             return (
               <a
               key={item.url}

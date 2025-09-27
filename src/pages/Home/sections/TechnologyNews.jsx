@@ -37,7 +37,7 @@ function TechnologyNews() {
 
         {/* 3 grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10 px-5 lg:px-10">
-          {data.slice(5, 9).map(function (item) {
+          {data?.slice(5, 9).map(function (item) {
             return (
               <a key={item.url} href={item.url} 
               target="_blank" rel="noopener noreferrer" 

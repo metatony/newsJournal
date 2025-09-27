@@ -13,7 +13,7 @@ function SectionOne() {
   return (
     <section>
       <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10">
-        {data.slice(0, 4).map(function (item) {
+        {data?.slice(0, 4).map(function (item) {
           return (
             <a key={item.url} href={item.url} target="_blank" rel="noopener noreferrer">
               <div className="flex space-x-4">
