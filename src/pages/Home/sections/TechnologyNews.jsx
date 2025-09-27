@@ -44,7 +44,7 @@ function TechnologyNews() {
               className="flex flex-col ">
                 <img
                   className="object-cover rounded-lg md:h-44 w-full"
-                  src={item.urlToImage}
+                  src={item.image}
                   alt=""
                 />
                 <div>

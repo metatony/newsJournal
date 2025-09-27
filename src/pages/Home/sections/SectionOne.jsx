@@ -19,7 +19,7 @@ function SectionOne() {
               <div className="flex space-x-4">
                 <img
                   className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
-                  src={item.urlToImage}
+                  src={item.image}
                   alt={item.source.name}
                 />
 
@@ -46,7 +46,7 @@ function SectionOne() {
         <div className="mt-10 lg:px-10 lg:rounded-lg">
           <img
             className="w-full lg:rounded-lg"
-            src={data[4].urlToImage}
+            src={data[4].image}
             alt="featured news image"
           />
         </div>

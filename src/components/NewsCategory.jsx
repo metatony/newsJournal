@@ -26,7 +26,7 @@ const NewsCategory = (props) => {
           <div className="">
               <img
                 className=" bg-blue-300 h-[267px] w-full object-cover rounded-lg"
-                src={item.urlToImage}
+                src={item.image}
                 alt={item.source.name}
               />
     

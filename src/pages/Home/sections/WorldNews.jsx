@@ -40,14 +40,14 @@ function WorldNews() {
         <div className="md:col-span-2">
           <img
             className="h-full w-full object-cover lg:rounded-lg"
-            src={data[0].urlToImage}
+            src={data[0].image}
             alt=""
           />
         </div>
         {/* flex-col grid */}
 
         <div className="flex flex-col gap-5 px-5 lg:px-0">
-          {data?.slice(1, 4).map(function (item) {
+          {data.slice(1, 4).map(function (item) {
             return (
               <a
               key={item.url}
@@ -58,7 +58,7 @@ function WorldNews() {
                 <div className="">
                   <img
                     className="h-36 md:h-44 w-full object-cover rounded-lg"
-                    src={item.urlToImage}
+                    src={item.image}
                     alt=""
                   />
                 </div>
