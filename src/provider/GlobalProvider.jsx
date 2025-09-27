@@ -7,14 +7,14 @@ export const GlobalContext = createContext();
 export const GlobalProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+  // const apiKey = import.meta.env.VITE_NEWS_API_KEY;
 
   useEffect(() => {
-    console.log("Loaded API key:", apiKey);
+    // console.log("Loaded API key:", apiKey);
 
     axios
       .get(
-        `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey}`
+        `/api/news/?category=general&lang=en&country=us&max=10`
       )
 
       .then(function (response) {
