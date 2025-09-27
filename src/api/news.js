@@ -16,6 +16,7 @@ export default async function handler(req, res) {
     });
 
     res.status(200).json(response.data);
+    console.log(response.data);
   } catch (error) {
     res.status(error.response?.status || 500).json({
       error: "Failed to fetch news",

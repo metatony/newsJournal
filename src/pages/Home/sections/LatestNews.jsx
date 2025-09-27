@@ -46,7 +46,7 @@ function LatestNews() {
 
         {/* flex-col grid */}
         <div className="flex flex-col gap-5 px-5 lg:px-0 ">
-          {data?.slice(6, 8).map(function (item) {
+          {data.slice(6, 8).map(function (item) {
             return (
               <a
                 key={item.url}
@@ -70,7 +70,7 @@ function LatestNews() {
 
       {/* 3 grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20 px-5 lg:px-10 justify-between">
-        {data?.slice(0, 3).map(function (item) {
+        {data.slice(0, 3).map(function (item) {
           return (
             <a
               key={item.url}

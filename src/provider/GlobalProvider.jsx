@@ -7,14 +7,16 @@ export const GlobalContext = createContext();
 export const GlobalProvider = ({ children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+  const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+  const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // CORS proxy URL
+
 
   useEffect(() => {
     // console.log("Loaded API key:", apiKey);
 
     axios
       .get(
-        `/api/news/?category=general&lang=en&country=us&max=10`
+        `${proxyUrl}https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey}`
       )
 
       .then(function (response) {
