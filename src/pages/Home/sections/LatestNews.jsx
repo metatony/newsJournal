@@ -38,7 +38,7 @@ function LatestNews() {
         <div className=" ">
           <img
             className="object-cover h-full w-full lg:rounded-lg"
-            src={data[5].image}
+            src={data[5].urlToImage}
             alt=""
             loading="lazy"
           />
@@ -60,7 +60,7 @@ function LatestNews() {
                 </div>
 
                 <div className="">
-                  <img className=" md:h-52 w-full rounded-lg" src={item.image} alt="" loading="lazy"/>
+                  <img className=" md:h-52 w-full rounded-lg" src={item.urlToImage} alt="" loading="lazy"/>
                 </div>
               </a>
             );
@@ -80,7 +80,7 @@ function LatestNews() {
             >
               <img
                 className=" w-full md:h-64 object-cover rounded-lg"
-                src={item.image}
+                src={item.urlToImage}
                 alt=""
               />
               <div>

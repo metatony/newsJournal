@@ -40,7 +40,7 @@ function WorldNews() {
         <div className="md:col-span-2">
           <img
             className="h-full w-full object-cover lg:rounded-lg"
-            src={data[0].image}
+            src={data[0].urlToImage}
             alt=""
           />
         </div>
@@ -58,7 +58,7 @@ function WorldNews() {
                 <div className="">
                   <img
                     className="h-36 md:h-44 w-full object-cover rounded-lg"
-                    src={item.image}
+                    src={item.urlToImage}
                     alt=""
                   />
                 </div>
