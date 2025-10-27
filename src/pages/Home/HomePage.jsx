@@ -4,7 +4,6 @@ import LatestNews from "./sections/LatestNews";
 import WorldNews from "./sections/WorldNews";
 import TechnologyNews from "./sections/TechnologyNews";
 
-
 function HomePage() {
   return (
     <div className=" mt-5 lg:mt-20 mb-6">
