@@ -16,7 +16,7 @@ export const GlobalProvider = ({ children }) => {
 
     axios
       .get(
-        `${proxyUrl}https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey}`
+        `https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=${apiKey}`
       )
 
       .then(function (response) {

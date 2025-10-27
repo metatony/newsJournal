@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         lang,
         country,
         max,
-        apikey: process.env.NEWS_API_KEY, // stored in Vercel env vars
+        apikey: process.env.NEWS_API_KEY,
       },
     });
 
