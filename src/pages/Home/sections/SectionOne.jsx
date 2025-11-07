@@ -13,10 +13,15 @@ function SectionOne() {
 
   return (
     <section>
-      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10">
+      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 xl:px-0">
         {newsCategory.map(function (item) {
           return (
-            <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">
+            <a
+              key={item.id}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="flex space-x-4">
                 <img
                   className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
@@ -25,11 +30,9 @@ function SectionOne() {
                 />
 
                 <div className="space-y-1">
-                  <p className="text-sm md:text-base font-[500] ">
-                    {item.name}
-                  </p>
+                  <p className="text-sm md:text-sm font-[500] ">{item.name}</p>
                   <p className="text-xs md:text-sm font-light leading-5 md:leading-6 ">
-                    {item.slug }
+                    {item.slug}
                   </p>
                 </div>
               </div>
@@ -41,20 +44,21 @@ function SectionOne() {
       {/* background image */}
       <div>
         <div className="mt-10 lg:rounded-lg">
-          <img
-            className="w-full "
-            src={data[4].image}
-            alt="featured news image"
-          />
+          <img className="w-full " src={data[4].image} alt={data[4].title} />
         </div>
 
         {/* bottom section */}
-        <div className="flex align  mt-10 px-5 lg:px-10 ">
-          <p className="small-header-title w-[230px] sm:w-80 lg:w-[600px]">
-            {data[4].title}
+        <div className="flex align  mt-10 px-5 xl:px-0 ">
+          <p className="small-header-title w-[230px] sm:w-80 lg:w-[600px] leading-7">
+            {data[4].title.toUpperCase()}
           </p>
 
-          <a href={data[4].url} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-5">
+          <a
+            href={data[4].url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-5"
+          >
             <p className="paragraph-text">Read Article</p>
             <TfiArrowCircleRight />
           </a>

@@ -49,10 +49,10 @@ function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 z-10 bg-white shadow-sm">
+    <div className="sticky top-0 z-60 bg-white ">
       {/* top nav */}
 
-        <div className="align border-t border-b py-4 flex my-2.5 px-5 lg:px-10">
+        <div className="align border-t border-b py-4 flex my-2.5 px-5 xl:px-0">
           <div className="flex items-center space-x-5">
             <CiGlobe />
             <p className="paragraph-text">{getFormattedDate()}</p>
@@ -72,7 +72,7 @@ function Navbar() {
         </div>
 
       {/* middle nav : logo */}
-      <div className="flex justify-center py-3 px-5 lg:px-10">
+      <div className="flex justify-center py-3 px-5 xl:px-0">
         <Link to="/">
           <img
             className="h-14 w-[300px] item-center"

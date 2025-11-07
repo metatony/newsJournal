@@ -21,7 +21,7 @@ function TechnologyNews() {
   return (
     <section className="mt-20">
       <div className="flex align border-b pb-4">
-        <p className=" pl-5 big-header-text w-64 md:w-80  lg:w-[600px]">
+        <p className=" pl-5 xl:pl-0 big-header-text w-64 md:w-80 lg:w-[600px]">
           TECHNOLOGY NEWS
         </p>
 
@@ -29,7 +29,7 @@ function TechnologyNews() {
           href={data[0].url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-5 pr-5 lg:pr-10"
+          className="flex items-center space-x-5 pr-5 xl:pr-0"
         >
           <p className="paragraph-text">View all</p>
           <TfiArrowCircleRight />
@@ -37,7 +37,7 @@ function TechnologyNews() {
       </div>
 
       {/* 3 grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 mt-10 px-5 lg:px-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 mt-10 px-5 xl:px-0">
         {data?.slice(5, 9).map(function (item) {
           return (
             <a
@@ -48,15 +48,15 @@ function TechnologyNews() {
               className="flex flex-col space-y-5 "
             >
               <img
-                className="object-cover rounded-lg md:h-44 w-full"
+                className="object-cover rounded-lg h-[165px] md:h-44 w-full"
                 src={item.image}
-                alt=""
+                alt={item.title}
               />
               <div className="space-y-3">
-                <p className="paragraph-text leading-7 font-medium">
+                <p className="text-xs sm:text-sm leading-7 font-medium">
                   {item.title?.length > 100
-                    ? item.title.substring(0, 100) + "..."
-                    : item.title}
+                    ? item.title.substring(0, 100).toUpperCase() + "..."
+                    : item.title.toUpperCase()}
                 </p>
                 <p className="source-text">
                   {item.source.name} | {formatDate(item.publishedAt)}

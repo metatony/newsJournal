@@ -15,7 +15,7 @@ import BbcNews from "./pages/Bbc/BbcNews";
 function App() {
   return (
     <GlobalProvider>
-      <div className="container mx-auto max-w-[1300px] border-t border-b border">
+      <div className="container mx-auto max-w-[1300px]">
         <BrowserRouter>
           <ScrollToTop />
           <Navbar />
@@ -37,4 +37,4 @@ function App() {
 
 export default App;
 
-// container mx-auto max-w-[1100px] border-t border-b border 
+// container mx-auto max-w-[1100px] border-t border-b border

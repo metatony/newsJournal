@@ -11,13 +11,13 @@ function Footer() {
   return (
     <div className="mt-28 ">
       {/* top footer nav */}
-      <div className=" py-4 border-t px-5 lg:px-10">
+      <div className="py-4 border-t px-5 xl:px-0">
         <img src={images.blackLogo} alt="footer logo" />
       </div>
 
       {/* bottom footer nav */}
       <div className="">
-        <div className="align flex flex-col md:flex-row px-5 lg:px-10 border-b border-t py-4">
+        <div className="align flex flex-col md:flex-row px-5 xl:px-0 border-t py-4">
           <div className="flex items-center space-x-5">
             <CgDropInvert />
             <p className="paragraph-text font-light">

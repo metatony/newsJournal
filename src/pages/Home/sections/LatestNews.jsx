@@ -20,7 +20,7 @@ function LatestNews() {
 
   return (
     <section className="mt-20 ">
-      <div className="flex items-start align border-b pb-4 px-5 lg:px-10">
+      <div className="flex items-start align border-b pb-4 px-5 xl:px-0">
         <p className="big-header-text w-56 md:w-80 lg:w-[600px]">LATEST NEWS</p>
 
         <a
@@ -29,26 +29,37 @@ function LatestNews() {
           rel="noopener noreferrer"
           className="flex items-center space-x-5"
         >
-          <p className="paragraph-text">View All</p>
+          <p className="paragraph-text ">View All</p>
           <TfiArrowCircleRight />
         </a>
       </div>
 
       {/* latest news grid */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10 lg:px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10 md:px-5 xl:px-0">
         {/* large */}
-        <div className=" ">
+        <div className="relative">
+          <div className="absolute bottom-2 left-4 z-10 text-white max-w-lg space-y-3">
+            <h3 className="paragraph-text leading-7 font-medium underline">
+              {data[5].title?.length > 80
+                ? data[5].title.substring(0, 80).toUpperCase() + "..."
+                : data[5].title.toUpperCase()}
+            </h3>
+            <p className="source-text">
+              {data[5].source.name} | {formatDate(data[5].publishedAt)}
+            </p>
+          </div>
+          <div className="absolute inset-0 bg-black opacity-35 lg:rounded-lg"></div>
           <img
-            className="object-cover h-full w-full lg:rounded-lg"
+            className="object-cover h-full md:h-[350px] w-full lg:rounded-lg"
             src={data[5].image}
-            alt=""
+            alt={data[5].title}
             loading="lazy"
           />
         </div>
 
         {/* flex-col grid */}
-        <div className="flex flex-col gap-5 px-5 lg:px-0 ">
+        <div className="flex flex-col gap-5 px-5 xl:px-0 ">
           {data.slice(6, 8).map(function (item) {
             return (
               <a
@@ -58,23 +69,23 @@ function LatestNews() {
                 rel="noopener noreferrer"
                 className="grid grid-cols-1 md:grid-cols-2 gap-3 md:items-center"
               >
-                <div className="space-y-3">
-                  <p className="paragraph-text leading-7 font-medium">
+                <div className="space-y-3 order-2 md:order-0">
+                  <p className="paragraph-text leading-7 font-medium ">
                     {" "}
                     {item.title?.length > 100
-                      ? item.title.substring(0, 100) + "..."
-                      : item.title}
+                      ? item.title.substring(0, 100).toUpperCase() + "..."
+                      : item.title.toUpperCase()}
                   </p>
                   <p className="source-text">
                     {item.source.name} | {formatDate(item.publishedAt)}
                   </p>
                 </div>
 
-                <div className="">
+                <div className="order-1 md:order-0">
                   <img
                     className="h-[165px] w-full rounded-lg"
                     src={item.image}
-                    alt=""
+                    alt={item.title}
                     loading="lazy"
                   />
                 </div>
@@ -85,7 +96,7 @@ function LatestNews() {
       </div>
 
       {/* 3 grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20 px-5 lg:px-10 justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20 px-5 xl:px-0 justify-between">
         {data.slice(0, 3).map(function (item) {
           return (
             <a
@@ -98,13 +109,13 @@ function LatestNews() {
               <img
                 className=" w-full h-[165px] md:h-64 object-cover rounded-lg"
                 src={item.image}
-                alt=""
+                alt={item.title}
               />
               <div className="space-y-3">
                 <p className="paragraph-text leading-7 font-medium ">
                   {item.title?.length > 100
-                    ? item.title.substring(0, 100) + "..."
-                    : item.title}
+                    ? item.title.substring(0, 100).toUpperCase() + "..."
+                    : item.title.toUpperCase()}
                 </p>
                 <p className="source-text">
                   {item.source.name} | {formatDate(item.publishedAt)}
