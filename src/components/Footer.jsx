@@ -20,11 +20,11 @@ function Footer() {
         <div className="align flex flex-col md:flex-row px-5 lg:px-10 border-b border-t py-4">
           <div className="flex items-center space-x-5">
             <CgDropInvert />
-            <p className="font-light text-sm text-[#7e7d7d]">
+            <p className="paragraph-text font-light">
               &copy; {new Date().getFullYear()} - All rights reserved
             </p>
             <a
-              className="font-light text-sm text-[#7e7d7d] hover:text-blue-400 "
+              className="paragraph-text font-light  hover:text-blue-400 "
               target="_blank"
               href="https://github.com/metatony"
               rel=" noopener noreferrer "

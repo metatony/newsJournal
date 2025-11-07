@@ -13,9 +13,6 @@ function HomePage() {
       {/* Latest News */}
       <LatestNews />
 
-      {/* World news */}
-      <WorldNews />
-
       {/* technology news */}
       <TechnologyNews />
     </div>

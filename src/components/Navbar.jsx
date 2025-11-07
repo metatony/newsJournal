@@ -55,9 +55,9 @@ function Navbar() {
         <div className="align border-t border-b py-4 flex my-2.5 px-5 lg:px-10">
           <div className="flex items-center space-x-5">
             <CiGlobe />
-            <p>{getFormattedDate()}</p>
+            <p className="paragraph-text">{getFormattedDate()}</p>
           </div>
-          <div className="flex items-center space-x-5">
+          <div className="flex items-center space-x-5 paragraph-text">
             {/* <p className="hidden lg:block">Menu</p> */}
             <Link
               to={menuLabel.link}
@@ -84,7 +84,7 @@ function Navbar() {
 
       {/* bottom nav - menu */}
       <div className="hidden lg:block border-t border-b py-4">
-        <div className="flex justify-center space-x-14 px-10 font-light">
+        <div className="flex justify-center space-x-14 px-10 paragraph-text">
           {navMenu.map(function (item) {
             return (
               <Link className="" key={item.name} to={item.link}>

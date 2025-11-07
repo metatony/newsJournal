@@ -21,12 +21,15 @@ function LatestNews() {
   return (
     <section className="mt-20 ">
       <div className="flex items-start align border-b pb-4 px-5 lg:px-10">
-        <p className="md:text-2xl font-medium w-56   md:w-80  lg:w-[600px] ">
-          LATEST NEWS
-        </p>
+        <p className="big-header-text w-56 md:w-80 lg:w-[600px]">LATEST NEWS</p>
 
-        <a href={data[0].url} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-5">
-          <p className="text-sm md:text-base font-light">Read Article</p>
+        <a
+          href={data[0].url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-5"
+        >
+          <p className="paragraph-text">View All</p>
           <TfiArrowCircleRight />
         </a>
       </div>
@@ -51,16 +54,29 @@ function LatestNews() {
               <a
                 key={item.url}
                 href={item.url}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="grid grid-cols-1 md:grid-cols-2 gap-3 md:items-center"
               >
-                <div className="">
-                  <p className="font-medium"> {item.title}</p>
-                  <p className="font-light text-sm">{item.source.name} - {formatDate(item.publishedAt)}</p>
+                <div className="space-y-3">
+                  <p className="paragraph-text leading-7 font-medium">
+                    {" "}
+                    {item.title?.length > 100
+                      ? item.title.substring(0, 100) + "..."
+                      : item.title}
+                  </p>
+                  <p className="source-text">
+                    {item.source.name} | {formatDate(item.publishedAt)}
+                  </p>
                 </div>
 
                 <div className="">
-                  <img className=" md:h-52 w-full rounded-lg" src={item.image} alt="" loading="lazy"/>
+                  <img
+                    className="h-[165px] w-full rounded-lg"
+                    src={item.image}
+                    alt=""
+                    loading="lazy"
+                  />
                 </div>
               </a>
             );
@@ -75,17 +91,24 @@ function LatestNews() {
             <a
               key={item.url}
               href={item.url}
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col items-start space-y-5"
             >
               <img
-                className=" w-full md:h-64 object-cover rounded-lg"
+                className=" w-full h-[165px] md:h-64 object-cover rounded-lg"
                 src={item.image}
                 alt=""
               />
-              <div>
-                <p className="font-medium ">{item.title}</p>
-                <p className="font-light mt-3">{item.source.name} - {formatDate(item.publishedAt)}</p>
+              <div className="space-y-3">
+                <p className="paragraph-text leading-7 font-medium ">
+                  {item.title?.length > 100
+                    ? item.title.substring(0, 100) + "..."
+                    : item.title}
+                </p>
+                <p className="source-text">
+                  {item.source.name} | {formatDate(item.publishedAt)}
+                </p>
               </div>
             </a>
           );

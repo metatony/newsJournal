@@ -63,11 +63,11 @@ function WorldNews() {
                   />
                 </div>
 
-                <div className="">
-                  <p className="font-light text-sm">
+                <div className="space-y-3">
+                  <p className="source-text">
                     {item.source.name} - {formatDate(item.publishedAt)}
                   </p>
-                  <p className="font-medium ">{item.title}</p>
+                  <p className="paragraph-text leading-7 font-medium ">{item.title}</p>
                 </div>
               </a>
             );

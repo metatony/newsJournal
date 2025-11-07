@@ -1,16 +1,33 @@
 @import "tailwindcss";
 
 body {
-    font-family: 'Zain', sans-serif;
-    @apply bg-[white]
+  font-family: "Satoshi", sans-serif;
+  @apply bg-[white];
 }
 
 @layer components {
-    .container {
-        @apply container mx-auto border-l border-r mt-5 py-5 ;
-    }
+  .container {
+    @apply container mx-auto border-l border-r mt-5 py-5;
+  }
 
-    .align {
-        @apply justify-between items-center;
-    }
+  .align {
+    @apply justify-between items-center;
+  }
+
+  .source-text {
+    @apply text-[12px] font-light
+  }
+
+  .paragraph-text {
+    @apply text-[12px] md:text-[14px];
+  }
+
+  .small-header-title {
+    @apply text-sm  md:text-lg lg:text-xl font-[500];
+  }
+
+  .big-header-text {
+    @apply text-base md:text-xl lg:text-2xl font-[500];
+  }
+
 }

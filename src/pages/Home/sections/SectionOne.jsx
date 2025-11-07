@@ -2,6 +2,7 @@ import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
 import ShimmerEffect from "../../../components/ShimmerEffect";
+import newsCategory from "../../../constants/newsCategory";
 
 function SectionOne() {
   const { data, loading } = useGlobal();
@@ -13,26 +14,22 @@ function SectionOne() {
   return (
     <section>
       <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-10">
-        {data.slice(0, 4).map(function (item) {
+        {newsCategory.map(function (item) {
           return (
-            <a key={item.url} href={item.url} target="_blank" rel="noopener noreferrer">
+            <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer">
               <div className="flex space-x-4">
                 <img
                   className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
-                  src={item.image}
-                  alt={item.source.name}
+                  src={item.thumbnailImage}
+                  alt={item.name}
                 />
 
-                <div className="">
-                  <p className="font-medium">
-                    {item.title?.length > 30
-                      ? item.title.substring(0, 30) + "..."
-                      : item.title}
+                <div className="space-y-1">
+                  <p className="text-sm md:text-base font-[500] ">
+                    {item.name}
                   </p>
-                  <p className="text-sm font-light">
-                    {item.description && item.description.length > 70
-                      ? item.description.substring(0, 70) + "..."
-                      : item.description}
+                  <p className="text-xs md:text-sm font-light leading-5 md:leading-6 ">
+                    {item.slug }
                   </p>
                 </div>
               </div>
@@ -43,22 +40,22 @@ function SectionOne() {
 
       {/* background image */}
       <div>
-        <div className="mt-10 lg:px-10 lg:rounded-lg">
+        <div className="mt-10 lg:rounded-lg">
           <img
-            className="w-full lg:rounded-lg"
+            className="w-full "
             src={data[4].image}
             alt="featured news image"
           />
         </div>
 
         {/* bottom section */}
-        <div className="flex align items-start mt-10 px-5 lg:px-10 ">
-          <p className="md:text-xl font-light w-[230px] sm:w-80 lg:w-[600px]">
+        <div className="flex align  mt-10 px-5 lg:px-10 ">
+          <p className="small-header-title w-[230px] sm:w-80 lg:w-[600px]">
             {data[4].title}
           </p>
 
           <a href={data[4].url} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-5">
-            <p className="text-sm md:text-base font-light">Read Article</p>
+            <p className="paragraph-text">Read Article</p>
             <TfiArrowCircleRight />
           </a>
         </div>
