@@ -22,9 +22,9 @@ function SectionOne() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="flex space-x-4">
+              <div className="flex items-center space-x-4">
                 <img
-                  className="h-16 w-16 md:h-20 bg-blue-300 md:w-20 object-cover rounded-lg"
+                  className="h-16 w-16 md:h-20 md:w-20 object-cover rounded-lg"
                   src={item.thumbnailImage}
                   alt={item.name}
                 />
