@@ -39,8 +39,8 @@ function LatestNews() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10 md:px-5 xl:px-0">
         {/* large */}
         <div className="relative">
-          <div className="absolute bottom-2 left-4 z-10 text-white max-w-lg space-y-3">
-            <h3 className="paragraph-text leading-7 font-medium underline">
+          <div className="absolute bottom-2 left-4 z-10 text-white w-xs md:w-lg space-y-3 ">
+            <h3 className="paragraph-text leading-7 font-medium md:underline">
               {data[5].title?.length > 80
                 ? data[5].title.substring(0, 80).toUpperCase() + "..."
                 : data[5].title.toUpperCase()}
@@ -51,7 +51,7 @@ function LatestNews() {
           </div>
           <div className="absolute inset-0 bg-black opacity-35 lg:rounded-lg"></div>
           <img
-            className="object-cover h-full md:h-[350px] w-full lg:rounded-lg"
+            className="object-cover h-full md:h-[400px] w-full lg:rounded-lg"
             src={data[5].image}
             alt={data[5].title}
             loading="lazy"
@@ -83,7 +83,7 @@ function LatestNews() {
 
                 <div className="order-1 md:order-0">
                   <img
-                    className="h-[165px] w-full rounded-lg"
+                    className="h-[190px] w-full rounded-lg"
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
@@ -107,7 +107,7 @@ function LatestNews() {
               className="flex flex-col items-start space-y-5"
             >
               <img
-                className=" w-full h-[165px] md:h-64 object-cover rounded-lg"
+                className=" w-full h-[190px] md:h-64 object-cover rounded-lg"
                 src={item.image}
                 alt={item.title}
               />

@@ -48,7 +48,7 @@ function TechnologyNews() {
               className="flex flex-col space-y-5 "
             >
               <img
-                className="object-cover rounded-lg h-[165px] md:h-44 w-full"
+                className="object-cover rounded-lg h-[190px] md:h-44 w-full"
                 src={item.image}
                 alt={item.title}
               />
