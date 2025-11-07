@@ -15,7 +15,7 @@ body {
   }
 
   .source-text {
-    @apply text-sm font-light;
+    @apply text-xs font-light;
   }
 
   .paragraph-text {
