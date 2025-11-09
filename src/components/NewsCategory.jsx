@@ -10,7 +10,7 @@ const NewsCategory = (props) => {
   }
 
   return (
-    <div className="mt-20">
+    <div className="mt-14">
       <div className="border-b pb-4 px-5 xl:px-0">
         <p className="md:text-2xl font-medium w-56 md:w-80 lg:w-[600px]">
           {props.category}

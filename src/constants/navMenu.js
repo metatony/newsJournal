@@ -1,9 +1,5 @@
 const navMenu = [
   {
-    name: "Menu",
-    link: "",
-  },
-  {
     name: "World News",
     link: "/world-news",
   },
@@ -13,13 +9,13 @@ const navMenu = [
   },
 
   {
-    name: "Apple",
-    link: "/apple",
+    name: "Health",
+    link: "/health",
   },
 
   {
-    name: "BBC",
-    link: "/bbc",
+    name: "Sports",
+    link: "/sports",
   },
   {
     name: "About Me",

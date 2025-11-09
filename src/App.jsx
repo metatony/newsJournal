@@ -23,8 +23,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/world-news" element={<WorldNews />} />
             <Route path="/technology" element={<TechnologyNews />} />
-            <Route path="/apple" element={<AppleNews />} />
-            <Route path="/bbc" element={<BbcNews />} />
+            <Route path="/health" element={<AppleNews />} />
+            <Route path="/sports" element={<BbcNews />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>
           <Footer />

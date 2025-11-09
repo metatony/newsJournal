@@ -19,7 +19,7 @@ function TechnologyNews() {
   }
 
   return (
-    <section className="mt-20 ">
+    <section className="mt-14 ">
       <div className="flex align border-b pb-4">
         <p className=" pl-5 xl:pl-0 big-header-text w-64 md:w-80 lg:w-[600px]">
           TECHNOLOGY NEWS

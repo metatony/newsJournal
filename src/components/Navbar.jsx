@@ -49,10 +49,10 @@ function Navbar() {
   };
 
   return (
-    <div className=" top-0 z-60 bg-white ">
+    <div className="top-0 z-60 bg-white ">
       {/* top nav */}
 
-        <div className="align border-t border-b py-4 flex  px-5 xl:px-0">
+        <div className="align border-t border-b py-4 flex px-5 xl:px-0">
           <div className="flex items-center space-x-5">
             <CiGlobe />
             <p className="paragraph-text">{getFormattedDate()}</p>

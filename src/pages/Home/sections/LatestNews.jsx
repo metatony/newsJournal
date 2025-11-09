@@ -19,7 +19,7 @@ function LatestNews() {
   }
 
   return (
-    <section className="mt-20 ">
+    <section className="mt-14 ">
       <div className="flex items-start align border-b pb-4 px-5 xl:px-0">
         <p className="big-header-text w-56 md:w-80 lg:w-[600px]">LATEST NEWS</p>
 
@@ -96,7 +96,7 @@ function LatestNews() {
       </div>
 
       {/* 3 grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5   md:mt-20 px-5 xl:px-0 justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 md:mt-20 px-5 xl:px-0 justify-between">
         {data.slice(0, 3).map(function (item) {
           return (
             <a

@@ -44,7 +44,7 @@ function SectionOne() {
       {/* background image */}
       <div>
         <div className="mt-10 lg:rounded-lg">
-          <img className="w-full " src={data[4].image} alt={data[4].title} />
+          <img className="w-full" src={data[4].image} alt={data[4].title} />
         </div>
 
         {/* bottom section */}
