@@ -50,7 +50,7 @@ function SectionOne() {
         {/* bottom section */}
         <div className="flex align  mt-10 px-5 xl:px-0 ">
           <p className="small-header-title w-[230px] sm:w-80 lg:w-[600px] leading-7">
-            {data[4].title.toUpperCase()}
+            {data[4].title}
           </p>
 
           <a

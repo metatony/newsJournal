@@ -31,8 +31,8 @@ const NewsCategory = (props) => {
                 <div className="mt-5 space-y-3">
                   <p className="text-xs sm:text-sm leading-7 font-medium">
                     {item.title?.length > 100
-                      ? item.title.substring(0, 100).toUpperCase() + "..."
-                      : item.title.toUpperCase()}
+                      ? item.title.substring(0, 100) + "..."
+                      : item.title}
                   </p>
                   <p className="source-text">
                     Source | {item.source.name}

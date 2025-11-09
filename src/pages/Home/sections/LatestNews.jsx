@@ -42,8 +42,8 @@ function LatestNews() {
           <div className="absolute bottom-2 left-4 z-10 text-white w-xs md:w-lg space-y-3 ">
             <h3 className="paragraph-text leading-7 font-medium md:underline">
               {data[5].title?.length > 80
-                ? data[5].title.substring(0, 80).toUpperCase() + "..."
-                : data[5].title.toUpperCase()}
+                ? data[5].title.substring(0, 80) + "..."
+                : data[5].title}
             </h3>
             <p className="source-text">
               {data[5].source.name} | {formatDate(data[5].publishedAt)}
@@ -73,8 +73,8 @@ function LatestNews() {
                   <p className="paragraph-text leading-7 font-medium ">
                     {" "}
                     {item.title?.length > 100
-                      ? item.title.substring(0, 100).toUpperCase() + "..."
-                      : item.title.toUpperCase()}
+                      ? item.title.substring(0, 100) + "..."
+                      : item.title}
                   </p>
                   <p className="source-text">
                     {item.source.name} | {formatDate(item.publishedAt)}
@@ -114,8 +114,8 @@ function LatestNews() {
               <div className="space-y-3">
                 <p className="paragraph-text leading-7 font-medium ">
                   {item.title?.length > 100
-                    ? item.title.substring(0, 100).toUpperCase() + "..."
-                    : item.title.toUpperCase()}
+                    ? item.title.substring(0, 100) + "..."
+                    : item.title}
                 </p>
                 <p className="source-text">
                   {item.source.name} | {formatDate(item.publishedAt)}

@@ -19,14 +19,14 @@ body {
   }
 
   .paragraph-text {
-    @apply text-xs sm:text-sm md:text-base;
+    @apply text-xs md:text-sm;
   }
 
   .small-header-title {
-    @apply text-sm  md:text-lg lg:text-xl font-[500];
+    @apply text-sm md:text-base font-[500];
   }
 
   .big-header-text {
-    @apply text-base md:text-xl lg:text-2xl font-[500];
+    @apply text-base md:text-lg font-[500];
   }
 }
