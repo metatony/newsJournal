@@ -15,7 +15,7 @@ import BbcNews from "./pages/Bbc/BbcNews";
 function App() {
   return (
     <GlobalProvider>
-      <div className="container mx-auto max-w-[1300px]">
+      <div className="container mx-auto max-w-[1200px]">
         <BrowserRouter>
           <ScrollToTop />
           <Navbar />

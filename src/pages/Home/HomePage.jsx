@@ -6,7 +6,7 @@ import TechnologyNews from "./sections/TechnologyNews";
 
 function HomePage() {
   return (
-    <div className=" mt-5 lg:mt-20 mb-6">
+    <div className=" mt-5 lg:mt-10 mb-5">
       {/* top section */}
       <SectionOne />
 

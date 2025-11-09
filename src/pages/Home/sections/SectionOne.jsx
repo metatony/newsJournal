@@ -13,7 +13,7 @@ function SectionOne() {
 
   return (
     <section>
-      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 xl:px-0">
+      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 xl:px-0 ">
         {newsCategory.map(function (item) {
           return (
             <a
@@ -48,7 +48,7 @@ function SectionOne() {
         </div>
 
         {/* bottom section */}
-        <div className="flex align  mt-10 px-5 xl:px-0 ">
+        <div className="flex align mt-10 px-5 xl:px-0 ">
           <p className="small-header-title w-[230px] sm:w-80 lg:w-[600px] leading-7">
             {data[4].title}
           </p>

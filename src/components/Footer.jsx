@@ -9,7 +9,7 @@ import { FcReddit } from "react-icons/fc";
 
 function Footer() {
   return (
-    <div className="mt-28 ">
+    <div className="mt-10">
       {/* top footer nav */}
       <div className="py-4 border-t px-5 xl:px-0">
         <img src={images.blackLogo} alt="footer logo" />
