@@ -43,18 +43,18 @@ function SectionOne() {
 
       {/* background image */}
       <div>
-        <div className="mt-8  lg:rounded-lg">
-          <img className="w-full" src={data[4].image} alt={data[4].title} />
+        <div className="mt-8">
+          <img className="object-cover h-60 md:h-[580px] w-full" src={data[1].image} alt={data[1].title} />
         </div>
 
         {/* bottom section */}
-        <div className="flex align mt-10 px-5 xl:px-0 ">
+        <div className="flex align mt-5 px-5 xl:px-0 ">
           <p className="small-header-title w-[230px] sm:w-80 lg:w-[600px] leading-7">
-            {data[4].title}
+            {data[1].title}
           </p>
 
           <a
-            href={data[4].url}
+            href={data[1].url}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-5"

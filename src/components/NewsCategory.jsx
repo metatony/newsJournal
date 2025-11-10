@@ -23,7 +23,7 @@ const NewsCategory = (props) => {
             <Link key={item.url} to={item.url}>
               <div className="">
                 <img
-                  className="h-[267px] w-full object-cover rounded-lg"
+                  className="h-48  md:h-[267px] w-full object-cover rounded-lg"
                   src={item.image}
                   alt={item.source.name}
                 />

@@ -51,7 +51,7 @@ function LatestNews() {
           </div>
           <div className="absolute inset-0 bg-black opacity-35 lg:rounded-lg"></div>
           <img
-            className="object-cover h-full md:h-[400px] w-full lg:rounded-lg"
+            className="object-cover h-60 md:h-[400px] w-full lg:rounded-lg"
             src={data[5].image}
             alt={data[5].title}
             loading="lazy"
@@ -83,7 +83,7 @@ function LatestNews() {
 
                 <div className="order-1 md:order-0">
                   <img
-                    className="h-[190px] w-full rounded-lg"
+                    className="object-cover h-[190px] w-full rounded-lg"
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
@@ -107,7 +107,7 @@ function LatestNews() {
               className="flex flex-col items-start space-y-5"
             >
               <img
-                className=" w-full h-[190px] md:h-64 object-cover rounded-lg"
+                className="w-full h-[190px] md:h-64 object-cover rounded-lg"
                 src={item.image}
                 alt={item.title}
               />
