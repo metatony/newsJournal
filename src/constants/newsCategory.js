@@ -1,7 +1,7 @@
 const newsCategory = [
   {
     id: 1,
-    name: "WORLD NEWS",
+    name: "World News",
     link: "/world-news",
     slug: "Economic policies are shaping international markets",
     thumbnailImage:
@@ -9,7 +9,7 @@ const newsCategory = [
   },
   {
     id: 2,
-    name: "TECHNOLOGY",
+    name: "Technology",
     link: "/technology",
     slug: "The latest trends in AI and innovation",
     thumbnailImage:
@@ -17,7 +17,7 @@ const newsCategory = [
   },
   {
     id: 3,
-    name: "HEALTH",
+    name: "Health",
     link: "/health",
     slug: "Analyzing the effects of global health policies",
     thumbnailImage:
@@ -26,7 +26,7 @@ const newsCategory = [
 
   {
     id: 4,
-    name: "SPORTS",
+    name: "Sports",
     link: "/sports",
     slug: "Affect the integrity and future of professional sports",
     thumbnailImage:

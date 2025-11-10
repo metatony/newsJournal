@@ -13,7 +13,7 @@ function SectionOne() {
 
   return (
     <section>
-      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-5 px-5 xl:px-0 ">
+      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-4 gap-3 px-5 xl:px-0 ">
         {newsCategory.map(function (item) {
           return (
             <a
@@ -30,7 +30,7 @@ function SectionOne() {
                 />
 
                 <div className="space-y-1">
-                  <p className="text-sm md:text-sm font-[500] ">{item.name}</p>
+                  <p className="text-xs md:text-sm font-[500] ">{item.name}</p>
                   <p className="text-xs md:text-sm font-light leading-5 md:leading-6 ">
                     {item.slug}
                   </p>
@@ -43,7 +43,7 @@ function SectionOne() {
 
       {/* background image */}
       <div>
-        <div className="mt-10 lg:rounded-lg">
+        <div className="mt-8  lg:rounded-lg">
           <img className="w-full" src={data[4].image} alt={data[4].title} />
         </div>
 

@@ -18,7 +18,7 @@ const navMenu = [
     link: "/sports",
   },
   {
-    name: "About Me",
+    name: "About",
     link: "/about",
   },
 ];
