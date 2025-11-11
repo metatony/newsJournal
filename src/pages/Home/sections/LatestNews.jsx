@@ -36,11 +36,11 @@ function LatestNews() {
 
       {/* latest news grid */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10 md:px-5 xl:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 mt-10 md:px-5 xl:px-0">
         {/* large */}
         <div className="relative">
-          <div className="absolute bottom-2 left-4 z-10 text-white w-xs md:w-lg space-y-3 ">
-            <h3 className="paragraph-text leading-7 font-medium md:underline">
+          <div className="absolute bottom-2 left-4 z-10 text-white w-xs space-y-3 ">
+            <h3 className="paragraph-text leading-7 font-medium sm:underline">
               {data[5].title?.length > 80
                 ? data[5].title.substring(0, 80) + "..."
                 : data[5].title}
@@ -49,9 +49,9 @@ function LatestNews() {
               {data[5].source.name} | {formatDate(data[5].publishedAt)}
             </p>
           </div>
-          <div className="absolute inset-0 bg-black opacity-35 lg:rounded-lg"></div>
+          <div className="absolute inset-0 bg-black opacity-35 md:rounded-lg"></div>
           <img
-            className="object-cover h-60 md:h-[400px] w-full lg:rounded-lg"
+            className="object-cover h-60 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[400px] w-full md:rounded-lg"
             src={data[5].image}
             alt={data[5].title}
             loading="lazy"
@@ -67,7 +67,7 @@ function LatestNews() {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="grid grid-cols-1 md:grid-cols-2 gap-3 md:items-center"
+                className="grid grid-cols-1 md:grid-cols-2 gap-2 md:items-center"
               >
                 <div className="space-y-3 order-2 md:order-0">
                   <p className="paragraph-text leading-7 font-medium ">
@@ -83,7 +83,7 @@ function LatestNews() {
 
                 <div className="order-1 md:order-0">
                   <img
-                    className="object-cover h-[190px] w-full rounded-lg"
+                    className="object-cover h-[190px] 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[190px] w-full rounded-lg"
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
@@ -107,7 +107,7 @@ function LatestNews() {
               className="flex flex-col items-start space-y-5"
             >
               <img
-                className="w-full h-[190px] md:h-64 object-cover rounded-lg"
+                className="w-full h-[190px] 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-64 object-cover rounded-lg"
                 src={item.image}
                 alt={item.title}
               />

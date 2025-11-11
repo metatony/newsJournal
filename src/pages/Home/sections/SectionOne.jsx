@@ -44,7 +44,7 @@ function SectionOne() {
       {/* background image */}
       <div>
         <div className="mt-8">
-          <img className="object-cover h-60 md:h-[580px] w-full" src={data[1].image} alt={data[1].title} />
+          <img className="object-cover h-60 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[428px] lg:h-[580px] w-full" src={data[1].image} alt={data[1].title} />
         </div>
 
         {/* bottom section */}

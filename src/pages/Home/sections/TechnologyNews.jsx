@@ -36,8 +36,8 @@ function TechnologyNews() {
         </a>
       </div>
 
-      {/* 3 grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 mt-10 px-5 xl:px-0">
+      {/* 4 grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 px-5 xl:px-0">
         {data?.slice(5, 9).map(function (item) {
           return (
             <a
@@ -48,7 +48,7 @@ function TechnologyNews() {
               className="flex flex-col space-y-5 "
             >
               <img
-                className="object-cover rounded-lg h-[190px] md:h-44 w-full"
+                className="object-cover rounded-lg h-[190px] 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-64 w-full"
                 src={item.image}
                 alt={item.title}
               />

@@ -5,6 +5,13 @@ body {
   @apply bg-[white];
 }
 
+@theme {
+  --breakpoint-3xs: 24rem;
+  --breakpoint-2xs: 28rem;
+  --breakpoint-xs: 36rem;
+
+}
+
 @layer components {
   .container {
     @apply container mx-auto;
