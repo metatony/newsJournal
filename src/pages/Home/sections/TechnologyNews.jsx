@@ -53,7 +53,7 @@ function TechnologyNews() {
                 alt={item.title}
               />
               <div className="space-y-3">
-                <p className="text-xs sm:text-sm leading-7 font-medium">
+                <p className="paragraph-text leading-7 font-medium">
                   {item.title?.length > 100
                     ? item.title.substring(0, 100) + "..."
                     : item.title}
