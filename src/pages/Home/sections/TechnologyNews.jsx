@@ -2,6 +2,8 @@ import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
 import ShimmerPost from "../../../components/ShimmerPost";
+import { Link} from "react-router-dom";
+
 
 function TechnologyNews() {
   const { data, loading } = useGlobal();
@@ -25,20 +27,18 @@ function TechnologyNews() {
           TECHNOLOGY NEWS
         </p>
 
-        <a
-          href={data[0].url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/technology"
           className="flex items-center space-x-5 pr-5 xl:pr-0"
         >
           <p className="paragraph-text">View all</p>
           <TfiArrowCircleRight />
-        </a>
+        </Link>
       </div>
 
       {/* 4 grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10 px-5 xl:px-0">
-        {data?.slice(5, 9).map(function (item) {
+        {data?.slice(6, 11).map(function (item) {
           return (
             <a
               key={item.url}

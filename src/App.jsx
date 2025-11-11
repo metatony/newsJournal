@@ -6,11 +6,12 @@ import Footer from "./components/Footer";
 import { GlobalProvider } from "./provider/GlobalProvider";
 import AboutPage from "./pages/About/About";
 import { Analytics } from "@vercel/analytics/react";
-import WorldNews from "./pages/World/WorldNews";
 import ScrollToTop from "./components/ScrollToTop";
-import TechnologyNews from "./pages/Tech/TechnologyNews";
-import AppleNews from "./pages/Apple/AppleNews";
-import BbcNews from "./pages/Bbc/BbcNews";
+import TechnologyNews from "./pages/subPages/TechnologyNews";
+import LatestNews from "./pages/subPages/LatestNews";
+import WorldNews from "./pages/subPages/WorldNews";
+import HealthNews from "./pages/subPages/HealthNews";
+import SportsNews from "./pages/subPages/SportNews";
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/world-news" element={<WorldNews />} />
+            <Route path="/latest-news" element={<LatestNews />} />
             <Route path="/technology" element={<TechnologyNews />} />
-            <Route path="/health" element={<AppleNews />} />
-            <Route path="/sports" element={<BbcNews />} />
+            <Route path="/world-news" element={<WorldNews />} />
+            <Route path="/health" element={<HealthNews />} />
+            <Route path="/sports" element={<SportsNews />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>
           <Footer />

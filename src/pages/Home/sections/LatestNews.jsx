@@ -2,6 +2,8 @@ import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
 import ShimmerPost from "../../../components/ShimmerPost";
+import { Link} from "react-router-dom";
+
 
 function LatestNews() {
   const { data, loading } = useGlobal();
@@ -23,15 +25,13 @@ function LatestNews() {
       <div className="flex items-start align border-b pb-4 px-5 xl:px-0">
         <p className="big-header-text w-56 md:w-80 lg:w-[600px]">LATEST NEWS</p>
 
-        <a
-          href={data[0].url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/latest-news"
           className="flex items-center space-x-5"
         >
           <p className="paragraph-text ">View All</p>
           <TfiArrowCircleRight />
-        </a>
+        </Link>
       </div>
 
       {/* latest news grid */}
@@ -41,26 +41,26 @@ function LatestNews() {
         <div className="relative">
           <div className="absolute bottom-2 left-4 z-10 text-white w-xs space-y-3 ">
             <h3 className="paragraph-text leading-7 font-medium sm:underline">
-              {data[5].title?.length > 80
-                ? data[5].title.substring(0, 80) + "..."
-                : data[5].title}
+              {data[1].title?.length > 80
+                ? data[1].title.substring(0, 80) + "..."
+                : data[1].title}
             </h3>
             <p className="source-text">
-              {data[5].source.name} | {formatDate(data[5].publishedAt)}
+              {data[1].source.name} | {formatDate(data[1].publishedAt)}
             </p>
           </div>
           <div className="absolute inset-0 bg-black opacity-35 md:rounded-lg"></div>
           <img
             className="object-cover h-60 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[400px] w-full md:rounded-lg"
-            src={data[5].image}
-            alt={data[5].title}
+            src={data[1].image}
+            alt={data[1].title}
             loading="lazy"
           />
         </div>
 
         {/* flex-col grid */}
         <div className="flex flex-col gap-5 px-5 xl:px-0 ">
-          {data.slice(6, 8).map(function (item) {
+          {data.slice(2, 4).map(function (item) {
             return (
               <a
                 key={item.url}
@@ -97,7 +97,7 @@ function LatestNews() {
 
       {/* 3 grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 md:mt-20 px-5 xl:px-0 justify-between">
-        {data.slice(0, 3).map(function (item) {
+        {data.slice(4, 7).map(function (item) {
           return (
             <a
               key={item.url}
