@@ -17,16 +17,18 @@ const NewsCategory = (props) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-3 gap-7 space-y-5 px-5 xl:px-0 mt-10">
+      <div className="grid grid-cols-1 sm:max-lg:grid-cols-2 lg:grid-cols-3 gap-7 space-y-5 md:space-y-10 px-5 xl:px-0 mt-10">
         {data.map(function (item) {
           return (
             <Link key={item.url} to={item.url}>
-              <div className="">
-                <img
-                  className="h-48  md:h-[267px] w-full object-cover rounded-lg"
-                  src={item.image}
-                  alt={item.source.name}
-                />
+              <div>
+                <div className="aspect-[7/4] w-full overflow-hidden rounded-lg">
+                  <img
+                    className="w-full h-full object-cover "
+                    src={item.image}
+                    alt={item.title}
+                  />
+                </div>
 
                 <div className="mt-5 space-y-3">
                   <p className="text-xs sm:text-sm leading-7 font-medium">
@@ -34,9 +36,7 @@ const NewsCategory = (props) => {
                       ? item.title.substring(0, 100) + "..."
                       : item.title}
                   </p>
-                  <p className="source-text">
-                    Source | {item.source.name}
-                  </p>
+                  <p className="source-text">Source | {item.source.name}</p>
                 </div>
               </div>
             </Link>

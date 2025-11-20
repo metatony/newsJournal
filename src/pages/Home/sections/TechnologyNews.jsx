@@ -2,8 +2,7 @@ import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
 import ShimmerPost from "../../../components/ShimmerPost";
-import { Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 function TechnologyNews() {
   const { data, loading } = useGlobal();
@@ -47,11 +46,14 @@ function TechnologyNews() {
               rel="noopener noreferrer"
               className="flex flex-col space-y-5 "
             >
-              <img
-                className="object-cover rounded-lg h-[190px] 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-64 w-full"
-                src={item.image}
-                alt={item.title}
-              />
+              <div className="aspect-[7/4] w-full overflow-hidden rounded-lg">
+                <img
+                  className="w-full h-full object-cover "
+                  src={item.image}
+                  alt={item.title}
+                />
+              </div>
+
               <div className="space-y-3">
                 <p className="paragraph-text leading-7 font-medium">
                   {item.title?.length > 100

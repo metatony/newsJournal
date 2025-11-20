@@ -2,8 +2,7 @@ import React from "react";
 import { TfiArrowCircleRight } from "react-icons/tfi";
 import { useGlobal } from "../../../provider/GlobalProvider";
 import ShimmerPost from "../../../components/ShimmerPost";
-import { Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 function LatestNews() {
   const { data, loading } = useGlobal();
@@ -25,10 +24,7 @@ function LatestNews() {
       <div className="flex items-start align border-b pb-4 px-5 xl:px-0">
         <p className="big-header-text w-56 md:w-80 lg:w-[600px]">LATEST NEWS</p>
 
-        <Link
-          to="/latest-news"
-          className="flex items-center space-x-5"
-        >
+        <Link to="/latest-news" className="flex items-center space-x-5">
           <p className="paragraph-text ">View All</p>
           <TfiArrowCircleRight />
         </Link>
@@ -50,16 +46,19 @@ function LatestNews() {
             </p>
           </div>
           <div className="absolute inset-0 bg-black opacity-35 md:rounded-lg"></div>
-          <img
-            className="object-cover h-60 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[400px] w-full md:rounded-lg"
-            src={data[1].image}
-            alt={data[1].title}
-            loading="lazy"
-          />
+
+          <div className="aspect-[7/4] h-full w-full overflow-hidden md:rounded-lg order-1 md:order-0">
+            <img
+              className="w-full h-full object-cover "
+              src={data[1].image}
+              alt={data[1].title}
+              loading="lazy"
+            />
+          </div>
         </div>
 
         {/* flex-col grid */}
-        <div className="flex flex-col gap-5 px-5 xl:px-0 ">
+        <div className="grid grid-cols-1 gap-5 px-5 md:px-0 xl:px-0 ">
           {data.slice(2, 4).map(function (item) {
             return (
               <a
@@ -72,8 +71,8 @@ function LatestNews() {
                 <div className="space-y-3 order-2 md:order-0">
                   <p className="paragraph-text leading-7 font-medium ">
                     {" "}
-                    {item.title?.length > 100
-                      ? item.title.substring(0, 100) + "..."
+                    {item.title?.length > 70
+                      ? item.title.substring(0, 70) + "..."
                       : item.title}
                   </p>
                   <p className="source-text">
@@ -81,9 +80,9 @@ function LatestNews() {
                   </p>
                 </div>
 
-                <div className="order-1 md:order-0">
+                <div className="aspect-[7/4] overflow-hidden rounded-lg order-1 md:order-0">
                   <img
-                    className="object-cover h-[190px] 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[190px] w-full rounded-lg"
+                    className="w-full h-full object-cover "
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
@@ -106,11 +105,14 @@ function LatestNews() {
               rel="noopener noreferrer"
               className="flex flex-col items-start space-y-5"
             >
-              <img
-                className="w-full h-[190px] 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-64 object-cover rounded-lg"
-                src={item.image}
-                alt={item.title}
-              />
+              <div className="aspect-[7/4] w-full overflow-hidden rounded-lg">
+                <img
+                  className="w-full h-full object-cover "
+                  src={item.image}
+                  alt={item.title}
+                />
+              </div>
+
               <div className="space-y-3">
                 <p className="paragraph-text leading-7 font-medium ">
                   {item.title?.length > 100

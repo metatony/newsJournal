@@ -44,12 +44,16 @@ function SectionOne() {
       {/* background image */}
       <div>
         <div className="mt-8">
-          <img className="object-cover h-60 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[428px] lg:h-[580px] w-full" src={data[0].image} alt={data[0].title} />
+          <img
+            className="object-cover h-60 3xs:h-[230px] 2xs:h-[300px] xs:h-[362px] md:h-[428px] lg:h-[580px] w-full"
+            src={data[0].image}
+            alt={data[0].title}
+          />
         </div>
 
         {/* bottom section */}
-        <div className="flex align mt-5 px-5 xl:px-0 ">
-          <p className="small-header-title w-[230px] sm:w-80 lg:w-[600px] leading-7">
+        <div className="flex flex-col sm:flex-row  mt-5 px-5 xl:px-0 w-full justify-between sm:items-center">
+          <p className="small-header-title w-full mb-5 sm:mb-0 sm:w-80 lg:w-[600px] leading-7">
             {data[0].title}
           </p>
 

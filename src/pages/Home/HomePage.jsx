@@ -1,7 +1,5 @@
-import React from "react";
 import SectionOne from "./sections/SectionOne";
 import LatestNews from "./sections/LatestNews";
-import WorldNews from "./sections/WorldNews";
 import TechnologyNews from "./sections/TechnologyNews";
 
 function HomePage() {
@@ -10,10 +8,8 @@ function HomePage() {
       {/* top section */}
       <SectionOne />
 
-      {/* Latest News */}
       <LatestNews />
 
-      {/* technology news */}
       <TechnologyNews />
     </div>
   );
