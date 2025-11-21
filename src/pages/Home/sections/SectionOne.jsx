@@ -30,7 +30,7 @@ function SectionOne() {
                 />
 
                 <div className="space-y-1">
-                  <p className="text-xs md:text-sm font-[500] ">{item.name}</p>
+                  <p className="text-xs md:text-sm font-[500] tracking-wide">{item.name}</p>
                   <p className="text-xs md:text-sm font-light leading-5 md:leading-6 ">
                     {item.slug}
                   </p>
