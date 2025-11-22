@@ -34,7 +34,14 @@ function LatestNews() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 mt-10 md:px-5 xl:px-0">
         {/* large */}
-        <div className="relative">
+
+        <a
+          key={data[1].url}
+          href={data[1].url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative"
+        >
           <div className="absolute bottom-2 left-4 z-10 text-white w-xs space-y-3 ">
             <h3 className="paragraph-text leading-7 font-medium sm:underline">
               {data[1].title?.length > 80
@@ -55,7 +62,7 @@ function LatestNews() {
               loading="lazy"
             />
           </div>
-        </div>
+        </a>
 
         {/* flex-col grid */}
         <div className="grid grid-cols-1 gap-5 px-5 md:px-0 xl:px-0 ">
